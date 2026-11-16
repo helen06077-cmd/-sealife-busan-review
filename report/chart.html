@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>아쿠아리움 리뷰 태그</title>
+<style>
+:root{
+  color-scheme:light;
+  --page:#f9f9f7; --surface-1:#fcfcfb;
+  --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#898781;
+  --grid:#e1e0d9; --axis:#c3c2b7; --ring:rgba(11,11,11,0.10);
+  --series-1:#2a78d6; --series-2:#eb6834; --candidate:#b5b3ab;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --page:#0d0d0d; --surface-1:#1a1a19;
+    --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,0.10);
+    --series-1:#3987e5; --series-2:#d95926; --candidate:#5f5e5a;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#0d0d0d; --surface-1:#1a1a19;
+  --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#898781;
+  --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,0.10);
+  --series-1:#3987e5; --series-2:#d95926; --candidate:#5f5e5a;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--text-primary);
+  font-family:system-ui,-apple-system,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.5}
+main{max-width:860px;margin:0 auto;padding:32px 16px 48px}
+.card{background:var(--surface-1);border:1px solid var(--ring);border-radius:12px;padding:24px}
+h1{font-size:1.25rem;line-height:1.4;margin:0 0 6px;text-wrap:balance}
+.sub{color:var(--text-secondary);font-size:.875rem;margin:0 0 18px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.8125rem;color:var(--text-secondary);margin-bottom:14px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:12px;height:12px;border-radius:3px;display:inline-block}
+.group{font-size:.75rem;font-weight:600;color:var(--text-muted);letter-spacing:.02em;margin:14px 0 4px}
+.row{display:grid;grid-template-columns:minmax(96px,150px) 1fr;align-items:center;gap:10px;height:34px}
+.label{font-size:.875rem;text-align:right;color:var(--text-primary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.track{position:relative;height:100%;display:flex;align-items:center;
+  background:repeating-linear-gradient(to right,var(--grid) 0 1px,transparent 1px 20%);border-left:1px solid var(--axis)}
+.bar{display:flex;height:22px;gap:2px;cursor:default}
+.seg{height:100%}
+.seg:last-child{border-radius:0 4px 4px 0}
+.s1{background:var(--series-1)} .s2{background:var(--series-2)} .sc{background:var(--candidate)}
+.val{font-size:.8125rem;color:var(--text-secondary);margin-left:8px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar:hover .seg,.bar:focus .seg{filter:brightness(1.08)}
+.bar:focus{outline:2px solid var(--text-primary);outline-offset:2px;border-radius:4px}
+.axis{display:grid;grid-template-columns:minmax(96px,150px) 1fr;gap:10px;font-size:.75rem;color:var(--text-muted);margin-top:4px}
+.ticks{position:relative;height:16px}
+.ticks span{position:absolute;transform:translateX(-50%);font-variant-numeric:tabular-nums}
+.note{font-size:.8125rem;color:var(--text-secondary);margin:16px 0 0}
+details{margin-top:16px;font-size:.875rem}
+summary{cursor:pointer;color:var(--text-secondary)}
+table{border-collapse:collapse;width:100%;margin-top:8px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--grid)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+#tip{position:fixed;pointer-events:none;background:var(--surface-1);color:var(--text-primary);
+  border:1px solid var(--ring);box-shadow:0 4px 16px rgba(0,0,0,.12);border-radius:8px;padding:8px 10px;
+  font-size:.8125rem;max-width:260px;opacity:0;transition:opacity .1s}
+@media (max-width:480px){ .card{padding:16px} .row,.axis{grid-template-columns:96px 1fr} }
+</style>
+</head>
+<body>
+<main>
+<div class="card">
+  <h1>기준표 태그 중 건물·설비가 19건으로 가장 많고, 그중 12건이 주차 이야기다</h1>
+  <p class="sub">분모: 분석 대상 리뷰 73건(글 있는 리뷰 98건 중 가격 불만 12건·짧은 글 10건·이 장소와 무관한 글 3건 제외) · 기간 2022-07-12 ~ 2026-10-27 · 출처: 카카오맵 ‘씨라이프 부산아쿠아리움’ 후기, 2026-11-16 수집</p>
+  <div class="legend" aria-hidden="true">
+    <span><i class="sw s1"></i>기준표 태그</span>
+    <span><i class="sw s2"></i>그중 주차</span>
+    <span><i class="sw sc"></i>새 태그 후보(기준표 태그가 하나도 안 붙은 리뷰)</span>
+  </div>
+  <div id="chart" role="list" aria-label="태그별 리뷰 건수"></div>
+  <div class="axis" aria-hidden="true"><div></div><div class="ticks" id="ticks"></div></div>
+  <p class="note">한 리뷰에 태그가 여러 개 붙을 수 있어 막대 합은 73을 넘어요. 기준표의 탕 구성·수질·찜질방·식음은 0건이에요. ‘새 태그 후보’는 기준표 태그가 하나도 맞지 않은 35건만 센 값이라, 전시·볼거리 이야기는 실제로 더 많아요.</p>
+  <details>
+    <summary>표로 보기</summary>
+    <table id="tbl"><thead><tr><th>구분</th><th>태그</th><th style="text-align:right">리뷰 수</th></tr></thead><tbody></tbody></table>
+  </details>
+</div>
+</main>
+<div id="tip" role="tooltip"></div>
+<script>
+const MAX=25;
+const data=[
+  {g:'기준표 태그',t:'건물·설비',segs:[['s2',12,'주차'],['s1',7,'주차 외 시설']]},
+  {g:'기준표 태그',t:'직원·서비스',segs:[['s1',12]]},
+  {g:'기준표 태그',t:'혼잡·다른 손님',segs:[['s1',9]]},
+  {g:'기준표 태그',t:'가격',segs:[['s1',5]]},
+  {g:'기준표 태그',t:'청결·냄새',segs:[['s1',4]]},
+  {g:'새 태그 후보',t:'전시·볼거리',segs:[['sc',23]]},
+  {g:'새 태그 후보',t:'전반 평가',segs:[['sc',7]]},
+  {g:'새 태그 후보',t:'그 외 5개',segs:[['sc',5]],d:'결제·위치·사진 스팟·아이 동반·기타 각 1건'}
+];
+const chart=document.getElementById('chart'),tip=document.getElementById('tip'),tb=document.querySelector('#tbl tbody');
+let last='';
+data.forEach(r=>{
+  const total=r.segs.reduce((a,s)=>a+s[1],0);
+  if(r.g!==last){const h=document.createElement('div');h.className='group';h.textContent=r.g;chart.appendChild(h);last=r.g;}
+  const row=document.createElement('div');row.className='row';row.setAttribute('role','listitem');
+  const lab=document.createElement('div');lab.className='label';lab.textContent=r.t;
+  const tr=document.createElement('div');tr.className='track';
+  const bar=document.createElement('div');bar.className='bar';bar.tabIndex=0;
+  bar.style.width=(total/MAX*100)+'%';
+  const parts=r.segs.map(s=>s[2]?`${s[2]} ${s[1]}건`:'').filter(Boolean).join(', ');
+  const name=`${r.t}: ${total}건 / 73건${parts?' ('+parts+')':''}${r.d?' — '+r.d:''}`;
+  bar.setAttribute('aria-label',name);
+  r.segs.forEach(s=>{const e=document.createElement('div');e.className='seg '+s[0];e.style.flex=s[1]+' 0 0';bar.appendChild(e);});
+  const v=document.createElement('span');v.className='val';v.textContent=total+'건'+(r.segs.length>1?` (주차 ${r.segs[0][1]})`:'');
+  tr.appendChild(bar);tr.appendChild(v);row.appendChild(lab);row.appendChild(tr);chart.appendChild(row);
+  const show=(x,y)=>{tip.innerHTML=`<b>${r.t}</b><br>${total}건 / 분석 대상 73건 (${Math.round(total/73*100)}%)${parts?'<br>'+parts:''}${r.d?'<br>'+r.d:''}`;tip.style.opacity=1;
+    const w=tip.offsetWidth;tip.style.left=Math.min(x+12,innerWidth-w-8)+'px';tip.style.top=(y+12)+'px';};
+  bar.addEventListener('mousemove',e=>show(e.clientX,e.clientY));
+  bar.addEventListener('mouseleave',()=>tip.style.opacity=0);
+  bar.addEventListener('focus',()=>{const b=bar.getBoundingClientRect();show(b.right,b.top);});
+  bar.addEventListener('blur',()=>tip.style.opacity=0);
+  const t=document.createElement('tr');
+  t.innerHTML=`<td>${r.g}</td><td>${r.t}${parts?' ('+parts+')':''}${r.d?' — '+r.d:''}</td><td class="n">${total}</td>`;tb.appendChild(t);
+});
+const ticks=document.getElementById('ticks');
+[0,5,10,15,20,25].forEach(n=>{const s=document.createElement('span');s.style.left=(n/MAX*100)+'%';s.textContent=n;ticks.appendChild(s);});
+</script>
+</body>
+</html>
