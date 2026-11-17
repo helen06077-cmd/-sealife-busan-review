@@ -8,3 +8,4 @@
 - 2026-11-17 · week1_prompts.md를 PDF로 변환(커밋 안 함), md→PDF 변환 스크립트 작성 · scripts/md_to_pdf.py, exports/week1_prompts.pdf(.gitignore 제외), .gitignore(exports/ 추가) · 필요 시 다른 md도 같은 스크립트로 변환
 - 2026-11-17 · 구·군별 Top5 관광지 검색건수 수집(데이터랩, Claude in Chrome) 및 검증 · data/processed/부산_구군별_Top5_관광지_수요예측_202301-202610.xlsx, data_inventory.md(행 추가) · 금요일 회의에서 제외 기준·검증필요 항목·2026년 검색량 감소 처리 결정
 - 2026-11-17 · 대표 사용자 3명(유모차 가족·해운대 / 어르신 동반·서면 / 혼자·해운대) 시나리오 작성 — 팀 자료 근거만 사용, 월별 입장객 배수 계산(2023~2025), 근거 없는 10개 항목은 현장 확인 목록으로 분리 · scenario.md · 팀과 시나리오 검토, 현장 확인 목록 중 열린관광지 목록·시간대별 방문 수요부터 확인
+- 2026-11-17 · 구·군별 Top5 엑셀(데이터랩 내비 검색건수, 추정치)을 시트별 csv 6개로 커밋 · data/processed/csv/부산_구군별_Top5_0~5_*.csv, notes/work-log.md · 금요일 회의에서 제외 기준·2026년 검색량 감소 처리 결정
