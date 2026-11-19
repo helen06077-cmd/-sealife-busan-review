@@ -230,7 +230,7 @@ td button{font:inherit;font-weight:700;background:none;border:none;color:var(--a
 <section id="map-view" class="map-view" role="tabpanel" aria-labelledby="map-tab" hidden>
   <div class="map-intro">
     <div><span class="map-kicker">BUSAN, WITH YOUR BUDDY</span><h2 data-mko="핀 하나마다, 새로운 부산" data-men="A new side of Busan at every pin">핀 하나마다, 새로운 부산</h2><p data-mko="명소를 지도에서 둘러보고, 나만의 짝꿍과 여행해요." data-men="Explore every stop with your travel buddy.">명소를 지도에서 둘러보고, 나만의 짝꿍과 여행해요.</p></div>
-    <div class="map-actions"><button class="map-btn" id="show-illustration" type="button" data-mko="일러스트 지도" data-men="Illustrated map">일러스트 지도</button><button class="map-btn" id="fit-places" type="button" data-mko="전체 핀 보기" data-men="Fit all pins">전체 핀 보기</button></div>
+    <div class="map-actions"><button class="map-btn" id="show-illustration" type="button" data-mko="일러스트 지도" data-men="Illustrated map">일러스트 지도</button><button class="map-btn" id="toggle-satellite" type="button" aria-pressed="false" data-mko="위성사진" data-men="Satellite">위성사진</button><button class="map-btn" id="fit-places" type="button" data-mko="전체 핀 보기" data-men="Fit all pins">전체 핀 보기</button></div>
   </div>
   <div class="map-workspace">
     <aside class="map-sidebar" aria-label="명소 목록">
@@ -755,7 +755,7 @@ fullRender();
   for(const course of PASS_COURSES) for(const step of course.steps) if(step.kind==='spot') add({name:step.name[0],en:step.name[1],description:step.sub[0],enDescription:step.sub[1],gu:step.gu,kind:'sight',url:placeURL(step.name[0])});
   for(const [gu,groups] of Object.entries(FOOD)) for(const kind of ['food','cafe']) for(const p of groups[kind]||[]) add({name:p.name,en:p.name,description:`${p.cat} · ★${p.rating} (${p.reviews}) · ${p.addr}`,enDescription:`${CN(p.cat)} · ★${p.rating} (${p.reviews}) · ${p.addr}`,gu,kind,url:p.url});
   const Leaf=window.L;
-  let map, tiles=null, pinLayer, routeLayer, currentMarker, accuracyCircle, visible=[], selected=null, routeKeys=new Set(), currentTrip=[];
+  let map, tiles=null, satellite=false, setSatellite=null, pinLayer, routeLayer, currentMarker, accuracyCircle, visible=[], selected=null, routeKeys=new Set(), currentTrip=[];
   let watchId=null, generation=0, isLive=false, lastPoint=null, lastAccuracy=0, demo=true, lastFixTime=null, pending=false;
   const T=(ko,en)=>L(ko,en);
   const nameOf=p=>T(p.name,p.en);
@@ -830,7 +830,10 @@ fullRender();
     /* 배경 지도: 키가 필요 없는 타일만 사용. 파일(file://)로 열면 Esri를 먼저 쓰고(OSM은 파일 접속을 막음), 서버(http://)로 열면 OSM을 먼저 쓴다. CARTO는 파일 접속 시 'API Key Required' 그림을 보내서 뺐다. Esri 일반 지도는 한국 지역에 13레벨까지만 실제 타일이 있고 14레벨부터는 'Map data not yet available' 그림을 보내므로, 확대도 13레벨까지만 허용한다(maxNativeZoom·maxZoom 13). */
     const TILE_ESRI=['https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxNativeZoom:13,maxZoom:13,attribution:'Tiles &copy; <a href="https://www.esri.com" target="_blank" rel="noopener">Esri</a> &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors'}];
     const TILE_OSM=['https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'}];
-    const TILE_SOURCES=location.protocol==='file:'?[TILE_ESRI,TILE_OSM]:[TILE_OSM,TILE_ESRI];
+    /* 위성사진: '위성사진' 버튼을 누르면 쓴다. 부산에서 일반 지도보다 더 확대된 실제 타일이 있다(17레벨까지 허용). */
+    const TILE_IMAGERY=['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxNativeZoom:17,maxZoom:17,attribution:'Tiles &copy; <a href="https://www.esri.com" target="_blank" rel="noopener">Esri</a> &mdash; Esri, Maxar, Earthstar Geographics, and the GIS User Community'}];
+    const STREET_SOURCES=location.protocol==='file:'?[TILE_ESRI,TILE_OSM]:[TILE_OSM,TILE_ESRI];
+    let TILE_SOURCES=satellite?[TILE_IMAGERY]:STREET_SOURCES;
     let tileIndex=0, tileErrors=0, tileOk=false;
     const useTiles=()=>{
       if(tiles) map.removeLayer(tiles);
@@ -844,6 +847,7 @@ fullRender();
       tiles.on('tileload',()=>{tileOk=true;tileErrors=0;byId('map-error').hidden=true;});
     };
     useTiles();
+    setSatellite=on=>{TILE_SOURCES=on?[TILE_IMAGERY]:STREET_SOURCES;tileIndex=0;useTiles();};
     pinLayer=Leaf.layerGroup().addTo(map);routeLayer=Leaf.layerGroup().addTo(map);
     filter();fitPins();setPosition([35.153193,129.118976],0,true,false);
   }
@@ -895,6 +899,7 @@ fullRender();
   byId('route-only').addEventListener('change',()=>{if(byId('route-only').checked){byId('map-category').value='all';byId('map-district').value='all';}filter();fitPins();});
   byId('reset-map-filters').onclick=()=>{byId('place-search').value='';byId('map-district').value='all';byId('map-category').value='sight';byId('route-only').checked=false;byId('saved-only').checked=false;selected=null;filter();fitPins();};
   byId('fit-places').onclick=fitPins;
+  byId('toggle-satellite').onclick=e=>{satellite=!satellite;const b=e.currentTarget;b.setAttribute('aria-pressed',String(satellite));b.classList.toggle('primary',satellite);setSatellite?.(satellite);};
   document.querySelectorAll('[data-character]').forEach(b=>b.onclick=()=>{character=b.dataset.character;try{localStorage.setItem('busanCharacter',character);}catch{}copy();if(currentMarker)currentMarker.setIcon(markerIcon());status();});
   byId('locate-me').onclick=locate;byId('stop-location').onclick=()=>stopLocation();
   byId('demo-location').onclick=()=>{stopLocation(false);setPosition([35.153193,129.118976],0,true);};
