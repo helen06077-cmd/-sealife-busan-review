@@ -155,6 +155,10 @@ td button{font:inherit;font-weight:700;background:none;border:none;color:var(--a
 .sprite img{position:absolute;max-width:none!important;width:220%;left:-4%;top:-24%;pointer-events:none}
 .sprite.morae img{width:250%;left:-30%;top:-17%}
 .sprite.pado img{width:245%;left:-121%;top:-17%}
+/* 지도 마커 안에서는 Leaflet 기본 CSS(.leaflet-marker-pane img{width:auto})가 더 강해서 캐릭터가 원본 크기로 커지고 빈 흰 원만 보였다. 같은 폭을 더 구체적인 선택자로 다시 지정한다. */
+.leaflet-container .leaflet-marker-pane .sprite img{width:220%}
+.leaflet-container .leaflet-marker-pane .sprite.morae img{width:250%}
+.leaflet-container .leaflet-marker-pane .sprite.pado img{width:245%}
 .location-status{font-size:12px;color:var(--muted);margin:7px 0 0;max-width:62ch}
 .location-controls{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
 .location-controls .map-btn{font-size:12px}
@@ -751,7 +755,7 @@ fullRender();
   for(const course of PASS_COURSES) for(const step of course.steps) if(step.kind==='spot') add({name:step.name[0],en:step.name[1],description:step.sub[0],enDescription:step.sub[1],gu:step.gu,kind:'sight',url:placeURL(step.name[0])});
   for(const [gu,groups] of Object.entries(FOOD)) for(const kind of ['food','cafe']) for(const p of groups[kind]||[]) add({name:p.name,en:p.name,description:`${p.cat} · ★${p.rating} (${p.reviews}) · ${p.addr}`,enDescription:`${CN(p.cat)} · ★${p.rating} (${p.reviews}) · ${p.addr}`,gu,kind,url:p.url});
   const Leaf=window.L;
-  let map, pinLayer, routeLayer, currentMarker, accuracyCircle, visible=[], selected=null, routeKeys=new Set(), currentTrip=[];
+  let map, tiles=null, pinLayer, routeLayer, currentMarker, accuracyCircle, visible=[], selected=null, routeKeys=new Set(), currentTrip=[];
   let watchId=null, generation=0, isLive=false, lastPoint=null, lastAccuracy=0, demo=true, lastFixTime=null, pending=false;
   const T=(ko,en)=>L(ko,en);
   const nameOf=p=>T(p.name,p.en);
@@ -812,20 +816,22 @@ fullRender();
   function selectPlace(id,fromPin=false){
     const p=catalog[id]; if(!p) return;
     selected=id;renderList();renderPins();
-    if(map){map.setView(p.coords,Math.max(map.getZoom(),14),{animate:!reducedMotion()});const pop=document.createElement('div');pop.innerHTML=`<strong>${html(nameOf(p))}</strong><br><span>${html(GN(p.gu))} · ${categoryName(p.kind)}</span><br>${links(p)}`;markerById.get(id)?.bindPopup(pop).openPopup();}
+    if(map){map.setView(p.coords,detailZoom(Math.max(map.getZoom(),14)),{animate:!reducedMotion()});const pop=document.createElement('div');pop.innerHTML=`<strong>${html(nameOf(p))}</strong><br><span>${html(GN(p.gu))} · ${categoryName(p.kind)}</span><br>${links(p)}`;markerById.get(id)?.bindPopup(pop).openPopup();}
     if(fromPin){const row=document.querySelector(`[data-place-row="${id}"]`);const list=byId('place-list');if(row) list.scrollTo({top:row.offsetTop-list.offsetTop,behavior:reducedMotion()?'auto':'smooth'});}
   }
-  function fitPins(){if(!map) return;const points=visible.map(p=>p.coords);if(points.length) map.fitBounds(Leaf.latLngBounds(points),{padding:[35,45],maxZoom:14,animate:!reducedMotion()});}
+  /* 지금 쓰는 배경 지도에 실제 타일이 있는 최대 레벨까지만 자동 확대한다(Esri 일반 지도는 한국에서 13레벨까지). */
+  function detailZoom(z){const native=tiles?.options?.maxNativeZoom;return native?Math.min(z,native):z;}
+  function fitPins(){if(!map) return;const points=visible.map(p=>p.coords);if(points.length) map.fitBounds(Leaf.latLngBounds(points),{padding:[35,45],maxZoom:detailZoom(14),animate:!reducedMotion()});}
   function initMap(){
     if(map) {map.invalidateSize();return;}
     if(!Leaf?.map){byId('map-error').hidden=false;byId('map-error').textContent=T('지도를 불러오지 못했어요. 새로고침해 주세요. 명소 목록과 길찾기는 사용할 수 있어요.','Map could not load. Refresh to retry. The place list and directions still work.');return;}
     map=Leaf.map('busan-map',{zoomControl:false,scrollWheelZoom:true}).setView([35.171,129.06],11);
     Leaf.control.zoom({position:'topright'}).addTo(map);
-    /* 배경 지도: 키가 필요 없는 타일만 사용. 파일(file://)로 열면 Esri를 먼저 쓰고(OSM은 파일 접속을 막음), 서버(http://)로 열면 OSM을 먼저 쓴다. CARTO는 파일 접속 시 'API Key Required' 그림을 보내서 뺐다. */
-    const TILE_ESRI=['https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Tiles &copy; <a href="https://www.esri.com" target="_blank" rel="noopener">Esri</a> &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors'}];
+    /* 배경 지도: 키가 필요 없는 타일만 사용. 파일(file://)로 열면 Esri를 먼저 쓰고(OSM은 파일 접속을 막음), 서버(http://)로 열면 OSM을 먼저 쓴다. CARTO는 파일 접속 시 'API Key Required' 그림을 보내서 뺐다. Esri 일반 지도는 한국 지역에 13레벨까지만 실제 타일이 있고 14레벨부터는 'Map data not yet available' 그림을 보내므로, 확대도 13레벨까지만 허용한다(maxNativeZoom·maxZoom 13). */
+    const TILE_ESRI=['https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxNativeZoom:13,maxZoom:13,attribution:'Tiles &copy; <a href="https://www.esri.com" target="_blank" rel="noopener">Esri</a> &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors'}];
     const TILE_OSM=['https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'}];
     const TILE_SOURCES=location.protocol==='file:'?[TILE_ESRI,TILE_OSM]:[TILE_OSM,TILE_ESRI];
-    let tileIndex=0, tiles=null, tileErrors=0, tileOk=false;
+    let tileIndex=0, tileErrors=0, tileOk=false;
     const useTiles=()=>{
       if(tiles) map.removeLayer(tiles);
       tileErrors=0; tileOk=false;
@@ -855,7 +861,7 @@ fullRender();
     lastPoint=point;lastAccuracy=accuracy;demo=isDemo;
     if(map){if(currentMarker)currentMarker.setLatLng(point).setIcon(markerIcon());else currentMarker=Leaf.marker(point,{icon:markerIcon(),zIndexOffset:2000,title:T('선택한 캐릭터 위치','Selected character location')}).addTo(map);
       if(accuracyCircle){map.removeLayer(accuracyCircle);accuracyCircle=null;}if(!isDemo&&accuracy>0)accuracyCircle=Leaf.circle(point,{radius:accuracy,color:'#235be8',weight:1,fillOpacity:.08,interactive:false}).addTo(map);
-      if(center)map.setView(point,15,{animate:!reducedMotion()});}
+      if(center)map.setView(point,detailZoom(15),{animate:!reducedMotion()});}
     status();
   }
   function stopLocation(announce=true){
@@ -864,7 +870,7 @@ fullRender();
     isLive=false;pending=false;byId('locate-me').disabled=false;byId('stop-location').hidden=true;copy();if(announce)status();
   }
   function locate(){
-    if(isLive&&lastPoint){map?.setView(lastPoint,15,{animate:!reducedMotion()});return;}
+    if(isLive&&lastPoint){map?.setView(lastPoint,detailZoom(15),{animate:!reducedMotion()});return;}
     if(!window.isSecureContext){byId('location-status').textContent=T('현재 위치는 HTTPS 주소에서 사용할 수 있어요. 광안리 미리보기는 바로 이용할 수 있어요.','Location requires HTTPS. You can still try the Gwangalli preview.');return;}
     if(!navigator.geolocation){byId('location-status').textContent=T('이 브라우저는 위치 확인을 지원하지 않아요. 미리보기를 이용해 주세요.','This browser does not support geolocation. Try the preview.');return;}
     stopLocation(false);const request=generation;pending=true;byId('locate-me').disabled=true;byId('stop-location').hidden=false;
