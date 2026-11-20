@@ -3763,10 +3763,26 @@ document.querySelectorAll('img[data-char]').forEach(img=>{ img.src=CHAR[img.data
     STATIONS.find(s=>s.n===to).on.forEach(([l,i])=>{const d=r.dist.get(r.key(l,i));if(d!=null&&(!best||d<best.d))best={d,end:[l,i]};});
     if(!best)return null;const nodes=[];let cur=best.end;while(cur){nodes.unshift(cur);cur=r.prev.get(r.key(cur[0],cur[1]));}return nodes;
   }
+  /* v9 수정: 광안리해수욕장 걷기 구간 — 길 데이터(ROAD)가 없으면 곧은 선이 광안리 앞바다를 가로질렀다.
+     해변 산책로(남천동 쪽 남쪽 끝 → 북쪽 끝)와 이어지는 민락수변로를 경유 좌표로 따라간다.
+     좌표: OpenStreetMap 해변 산책로·민락수변로 선(2026-11-20 조회), 모두 해안선 안쪽 육지. */
+  const GWANGALLI='광안리해수욕장';
+  const GW_SHORE=[[35.146125,129.114764],[35.147136,129.114397],[35.147337,129.114409],[35.14897,129.114924],[35.153341,129.118333],[35.153939,129.119086],[35.154622,129.120352],[35.155525,129.12287],[35.155622,129.123459]];
+  const GW_MINRAK=[[35.155741,129.123596],[35.153005,129.124538],[35.153536,129.126857],[35.154114,129.128379],[35.154712,129.130834],[35.154546,129.131319],[35.154516,129.131678],[35.154984,129.133652]];
+  const GW_LINE=GW_SHORE.concat(GW_MINRAK);
+  function shoreVia(x,y,X,Y){
+    const gx=norm(x)===GWANGALLI, gy=norm(y)===GWANGALLI;
+    if(gx===gy) return [X,Y];
+    const G=gx?X:Y, P=gx?Y:X;
+    const near=c=>{let k=0,b=Infinity;GW_LINE.forEach((p,i)=>{const d=kmBetween(p,c);if(d<b){b=d;k=i;}});return k;};
+    const i=near(G), j=near(P), seq=i<=j?GW_LINE.slice(i,j+1):GW_LINE.slice(j,i+1).reverse();
+    const pts=[G,...seq,P];
+    return gx?pts:pts.reverse();
+  }
   /* 한 구간을 그릴 조각들: {kind:'walk'|'bus'|'subway', pts, steps, d, line, stations} */
   function legParts(origin,target,mode,g){
     const a=origin.q,b=target.q,A=origin.p.coords,B=target.p.coords,parts=[];
-    const walkPart=(x,y,X,Y,extra)=>{const r=roadOf(x,y,'f');return {kind:'walk',pts:r?[X,...r.pts,Y]:[X,Y],steps:r?r.s:null,d:r?r.d:null,approx:!r,...extra};};
+    const walkPart=(x,y,X,Y,extra)=>{const r=roadOf(x,y,'f');return {kind:'walk',pts:r?[X,...r.pts,Y]:shoreVia(x,y,X,Y),steps:r?r.s:null,d:r?r.d:null,approx:!r,...extra};};
     if(mode==='subway'&&g&&g.sub&&g.sub.from){
       const S1=stCoord(g.sub.from),S2=stCoord(g.sub.to),nodes=subNodes(g.sub.from,g.sub.to);
       const e1=nearExit(g.sub.from,A), e2=nearExit(g.sub.to,B);
