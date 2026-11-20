@@ -1,0 +1,536 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-20T01:01:02Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "relation",
+  "id": 2195500,
+  "tags": {
+    "from": "금곡주차장",
+    "interval": "25min(분)",
+    "name": "부산버스 121",
+    "network": "부산시내버스",
+    "opening_hours": "05:00-22:15",
+    "operator": "삼진여객",
+    "public_transport:version": "2",
+    "ref": "121",
+    "route": "bus",
+    "to": "장전역",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 2195501,
+  "tags": {
+    "interval": "5min(분)",
+    "interval:night": "20min(분)",
+    "name": "부산버스 15 (use as and late-night line)",
+    "network": "부산시내버스",
+    "opening_hours": "05:00-22:05,22:35-22:55",
+    "operator": "삼진여객",
+    "ref": "15",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 2195502,
+  "tags": {
+    "from": "금곡동",
+    "interval": "00:05 - 00:06",
+    "name": "부산버스 111",
+    "network": "부산시내버스",
+    "opening_hours": "05:00-22:10",
+    "operator": "국제여객, 삼진여객",
+    "public_transport:version": "2",
+    "ref": "111",
+    "route": "bus",
+    "to": "진시장",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 2195503,
+  "tags": {
+    "name": "북구3",
+    "network": "부산 북구 마을버스",
+    "ref": "북구3",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 2204547,
+  "tags": {
+    "name": "63",
+    "network": "양산시내버스",
+    "ref": "63",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 2204550,
+  "tags": {
+    "name": "금정1",
+    "network": "부산 금정구 마을버스",
+    "ref": "금정1",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 2204551,
+  "tags": {
+    "interval": "00:06",
+    "name": "부산버스 126",
+    "network": "부산시내버스",
+    "opening_hours": "04:40-22:35",
+    "operator": "삼진여객, 성원여객, 금진여객",
+    "public_transport:version": "2",
+    "ref": "126",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 2204552,
+  "tags": {
+    "from": "부산역",
+    "name": "59",
+    "network": "부산시내버스",
+    "operator": "삼진여객",
+    "public_transport:version": "2",
+    "ref": "59",
+    "route": "bus",
+    "to": "화명동",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 2204558,
+  "tags": {
+    "name": "24",
+    "network": "양산시내버스",
+    "ref": "24",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 2859858,
+  "tags": {
+    "int_name": "Gwangan-2",
+    "name": "수영2",
+    "operator": "광안여객",
+    "ref": "수영2",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7083826,
+  "tags": {
+    "description": "구서 - 외대 - 남산 Guseo - Woedae (Univ. of Foreign Students) - Namsan",
+    "name": "금정구 3번(남산행)",
+    "name:ko": "금정구 3번(남산행)",
+    "network": "부산광역시 마을버스 운송사업조합",
+    "operator": "태성여객",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7083827,
+  "tags": {
+    "description": "남산 - 외대 - 구서 Namsan - Woedae (Univ. of Foreign Students) - Guseo",
+    "name": "금정구 3번(구서행)",
+    "name:ko": "금정구 3번(구서행)",
+    "network": "부산광역시 마을버스 운송사업조합",
+    "operator": "부산광역시 마을버스 운송사업조합",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7111732,
+  "tags": {
+    "description": "구서 - 브니엘고 - 구서 Guseo - Beunielgo - Guseo",
+    "name": "금정 3번(브니엘행)",
+    "name:ko": "금정 3번(브니엘행)",
+    "network": "부산광역시 마을버스 운송사업조합",
+    "operator": "태성여객",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7407111,
+  "tags": {
+    "interval": "00:09",
+    "name": "부산버스 39",
+    "opening_hours": "05:00 - 22:05",
+    "operator": "부산여객자동차(주)",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7430876,
+  "tags": {
+    "interval": "00:11",
+    "name": "부산버스 1003",
+    "opening_hours": "04:20 - 22:20",
+    "operator": "부산여객자동차(주)",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7431037,
+  "tags": {
+    "interval": "00:10",
+    "name": "부산버스 1003(심야)",
+    "opening_hours": "22:30 - 23:45",
+    "operator": "부산여객자동차(주)",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7431230,
+  "tags": {
+    "from": "청강리",
+    "interval": "00:20 - 00:25",
+    "name": "부산 버스 1011: 청강리 → 경제자유구역청",
+    "network": "부산시 급행버스",
+    "opening_hours": "05:00 - 21:00",
+    "operator": "부일여객, 해동여객",
+    "public_transport:version": "2",
+    "ref": "1011",
+    "route": "bus",
+    "to": "경제자유구역청",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7434198,
+  "tags": {
+    "interval": "00:10",
+    "name": "부산버스 141",
+    "opening_hours": "05:00 - 22:00",
+    "operator": "해동여객",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7437154,
+  "tags": {
+    "interval": "00:15",
+    "name": "부산버스 141(심야)",
+    "opening_hours": "22:40 - 23:40",
+    "operator": "해동여객",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7437447,
+  "tags": {
+    "from": "청강리",
+    "interval": "00:12",
+    "name": "부산버스 200",
+    "network": "부산광역시 일반시내버스",
+    "opening_hours": "04:40 - 21:50",
+    "operator": "세익여객",
+    "public_transport:version": "2",
+    "ref": "200",
+    "route": "bus",
+    "to": "북구청",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7477483,
+  "tags": {
+    "interval": "12min(분)",
+    "name": "부산버스 100",
+    "opening_hours": "04:50-21:50",
+    "operator": "해동여객",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7496365,
+  "tags": {
+    "name": "부산버스 100-1",
+    "operator": "해동여객",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7504068,
+  "tags": {
+    "interval": "22min(분)",
+    "name": "부산버스 139",
+    "opening_hours": "05:00-22:00",
+    "operator": "부산여객자동차(주)",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7833948,
+  "tags": {
+    "name": "부산버스 20",
+    "ref": "20",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7833949,
+  "tags": {
+    "name": "부산버스 22",
+    "ref": "22",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7833950,
+  "tags": {
+    "name": "부산버스 24",
+    "ref": "24",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7833951,
+  "tags": {
+    "name": "부산버스 27",
+    "ref": "27",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7833952,
+  "tags": {
+    "name": "부산버스 131",
+    "ref": "131",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7833953,
+  "tags": {
+    "name": "부산남구마을버스 2",
+    "ref": "2",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 7833954,
+  "tags": {
+    "name": "부산남구마을버스 8",
+    "ref": "8",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 8119135,
+  "tags": {
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 8119136,
+  "tags": {
+    "name": "부산버스 155",
+    "network": "부산광역시",
+    "operator": "부산광역시",
+    "ref": "155",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 8185382,
+  "tags": {
+    "from": "장전역",
+    "interval": "25min(분)",
+    "name": "부산버스 121",
+    "network": "부산시내버스",
+    "opening_hours": "05:00-22:15",
+    "operator": "삼진여객",
+    "public_transport:version": "2",
+    "ref": "121",
+    "route": "bus",
+    "to": "금곡주차장",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 8209005,
+  "tags": {
+    "from": "진시장",
+    "interval": "00:05 - 00:06",
+    "name": "부산버스 111",
+    "network": "부산시내버스",
+    "opening_hours": "05:00-22:10",
+    "operator": "국제여객, 삼진여객",
+    "public_transport:version": "2",
+    "ref": "111",
+    "route": "bus",
+    "to": "금곡동",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 8212441,
+  "tags": {
+    "from": "북구청",
+    "interval": "00:12",
+    "name": "부산 버스 200",
+    "network": "부산광역시 일반시내버스",
+    "opening_hours": "04:40 - 21:50",
+    "operator": "세익여객",
+    "public_transport:version": "2",
+    "ref": "200",
+    "route": "bus",
+    "to": "청강리공영차고지",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 8218569,
+  "tags": {
+    "from": "경제자유구역청",
+    "interval": "00:20 - 00:25",
+    "name": "부산 버스 1011: 경제자유구역청 → 청강리",
+    "network": "부산시 급행버스",
+    "opening_hours": "05:00 - 21:00",
+    "operator": "부일여객, 해동여객",
+    "public_transport:version": "2",
+    "ref": "1011",
+    "route": "bus",
+    "to": "청강리",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 8226614,
+  "tags": {
+    "from": "화명동",
+    "name": "59",
+    "network": "부산시내버스",
+    "operator": "삼진여객",
+    "public_transport:version": "2",
+    "ref": "59",
+    "route": "bus",
+    "to": "부산역",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 8901114,
+  "tags": {
+    "name": "김해 버스 44",
+    "operator": "김해시",
+    "ref": "44",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 12773247,
+  "tags": {
+    "from": "오션초등학교",
+    "interval": "14min",
+    "name": "부산 버스 강서20",
+    "network": "부산 마을버스",
+    "operator": "녹산버스",
+    "ref": "강서20",
+    "route": "bus",
+    "to": "하단역",
+    "type": "route",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "relation",
+  "id": 13825400,
+  "tags": {
+    "name": "부산 → 서울경부 고속버스",
+    "name:ko": "부산 → 서울경부 고속버스",
+    "operator": "금호고속;중앙고속;동양고속;한일고속;천일고속;삼화고속",
+    "route": "bus",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 14997696,
+  "tags": {
+    "name": "51",
+    "network": "부산 시내버스",
+    "operator": "화신여객",
+    "route": "bus",
+    "type": "route"
+  }
+}
+
+  ]
+}

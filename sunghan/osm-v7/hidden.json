@@ -1,0 +1,4263 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-20T01:03:06Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 368743176,
+  "lat": 35.1583240,
+  "lon": 129.1817750,
+  "tags": {
+    "amenity": "hospital",
+    "name": "달맞이한의원",
+    "name:en": "Dalmaji Oriental Medicine Clinic",
+    "name:ko": "달맞이한의원",
+    "name:ko-Latn": "Dalmajihanuiwon"
+  }
+},
+{
+  "type": "node",
+  "id": 368743617,
+  "lat": 35.1581940,
+  "lon": 129.1812130,
+  "tags": {
+    "amenity": "hospital",
+    "name": "달맞이요양병원",
+    "name:en": "Dalmajiyoyang Hospital",
+    "name:ko": "달맞이요양병원",
+    "name:ko-Latn": "Dalmajiyoyangbyeongwon"
+  }
+},
+{
+  "type": "node",
+  "id": 368864638,
+  "lat": 35.1603020,
+  "lon": 129.1831650,
+  "tags": {
+    "amenity": "place_of_worship",
+    "denomination": "catholic",
+    "name": "달맞이성당",
+    "name:en": "Dalmaji Catholic Church",
+    "name:ko": "달맞이성당",
+    "name:ko-Latn": "Dalmajiseongdang",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 368864730,
+  "lat": 35.1172540,
+  "lon": 129.1121820,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "천주교부산교구이기대성당",
+    "name:en": "Igidae Catholic Church",
+    "name:ko": "천주교부산교구이기대성당",
+    "name:ko-Latn": "Cheonjugyobusangyoguigidaeseongdang"
+  }
+},
+{
+  "type": "node",
+  "id": 368864733,
+  "lat": 35.0520688,
+  "lon": 128.9610717,
+  "tags": {
+    "amenity": "place_of_worship",
+    "denomination": "catholic",
+    "name": "천주교부산교구몰운대성당",
+    "name:en": "Molundae Catholic Church",
+    "name:ko": "천주교부산교구몰운대성당",
+    "name:ko-Latn": "Cheonjugyobusangyogumolundaeseongdang",
+    "religion": "christian"
+  }
+},
+{
+  "type": "node",
+  "id": 368931367,
+  "lat": 35.0665980,
+  "lon": 128.9786560,
+  "tags": {
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "몰운대초등학교",
+    "name:en": "Molundae Elementary School",
+    "name:ko-Latn": "Molundaechodeunghakgyo"
+  }
+},
+{
+  "type": "node",
+  "id": 368957112,
+  "lat": 35.1573910,
+  "lon": 129.1729140,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "달맞이횟집",
+    "name:en": "Dalmaji Fish Restaurant",
+    "name:ko": "달맞이횟집",
+    "name:ko-Latn": "Dalmajihoetjip"
+  }
+},
+{
+  "type": "node",
+  "id": 1855433078,
+  "lat": 35.1033486,
+  "lon": 129.0269106,
+  "tags": {
+    "name": "보수동 책방골목",
+    "name:en": "Bosudong Book store street",
+    "name:ja": "寶水洞本屋通り",
+    "shop": "books"
+  }
+},
+{
+  "type": "node",
+  "id": 3859163057,
+  "lat": 35.0972086,
+  "lon": 129.0101505,
+  "tags": {
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "감정초등학교.감천문화마을 (구감 방면)",
+    "name:en": "Gamcheon Cultural Village",
+    "name:ja": "甘川初等学校,甘川文化村(クガム方面)",
+    "name:zh": "甘川洞下車處",
+    "public_transport": "platform",
+    "shelter": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3859163058,
+  "lat": 35.0973041,
+  "lon": 129.0106455,
+  "tags": {
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "감정초등학교.감천문화마을 (한샘슈퍼 방면)",
+    "name:en": "Gamcheon Cultural Village",
+    "name:ja": "甘川初等学校,甘川文化村(ハンセムスーパー方面)",
+    "name:zh": "甘川洞回程上車處",
+    "public_transport": "platform",
+    "shelter": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 4533702797,
+  "lat": 35.1232074,
+  "lon": 129.1125209,
+  "tags": {
+    "highway": "bus_stop",
+    "name": "이기대입구",
+    "name:en": "20, 22, 24, 27, 39, 131",
+    "stop_id": "07133"
+  }
+},
+{
+  "type": "node",
+  "id": 4537650264,
+  "lat": 35.1228374,
+  "lon": 129.1235911,
+  "tags": {
+    "name": "이기대 산책로",
+    "name:en": "Esplanade",
+    "name:ko": "이기대 산책로",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 4636650755,
+  "lat": 35.0856612,
+  "lon": 128.8716877,
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "강서구",
+    "addr:street": "신호산단1로18번길",
+    "addr:subdistrict": "신호동",
+    "name": "갈맷길",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 4636650756,
+  "lat": 35.0838879,
+  "lon": 128.8725251,
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "강서구",
+    "addr:street": "신호산단1로",
+    "addr:subdistrict": "신호동",
+    "name": "갈맷길",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 4636650757,
+  "lat": 35.0840633,
+  "lon": 128.8713820,
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "강서구",
+    "addr:street": "신호산단1로72번길",
+    "addr:subdistrict": "신호동",
+    "name": "갈맷길",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 4636650758,
+  "lat": 35.0832644,
+  "lon": 128.8698693,
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "강서구",
+    "addr:street": "신호산단1로72번길",
+    "addr:subdistrict": "신호동",
+    "name": "갈맷길",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 4636650759,
+  "lat": 35.0819006,
+  "lon": 128.8690686,
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "강서구",
+    "addr:street": "신호산단1로72번길",
+    "addr:subdistrict": "신호동",
+    "name": "갈맷길",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 4636650760,
+  "lat": 35.0802768,
+  "lon": 128.8763087,
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "강서구",
+    "addr:street": "신호산단1로98번길",
+    "addr:subdistrict": "신호동",
+    "name": "갈맷길",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 4636650770,
+  "lat": 35.0796057,
+  "lon": 128.8763424,
+  "tags": {
+    "name": "신호 갈맷길",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 4636650771,
+  "lat": 35.0797615,
+  "lon": 128.8808917,
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "강서구",
+    "addr:street": "신호산단1로140번길",
+    "addr:subdistrict": "신호동",
+    "name": "갈맷길",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 4636650772,
+  "lat": 35.0807741,
+  "lon": 128.8718689,
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "강서구",
+    "addr:street": "신호산단1로98번길",
+    "addr:subdistrict": "신호동",
+    "name": "신호갈맷길",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 4648166184,
+  "lat": 35.0530336,
+  "lon": 128.9613301,
+  "tags": {
+    "name": "탑플러스마트(롯데캐슬몰운대점)",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 4695685893,
+  "lat": 35.1563967,
+  "lon": 129.1789652,
+  "tags": {
+    "addr:street": "달맞이길 (Dalmajigil)",
+    "name": "달맞이 벚꽃길",
+    "name:en": "Cherry Blossom Viewing",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 4807672421,
+  "lat": 35.1013967,
+  "lon": 129.1216924,
+  "tags": {
+    "name": "이기대해안산책로",
+    "name:en": "Igidae Coastal Trail",
+    "name:ko": "이기대해안산책로",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 4984075583,
+  "lat": 35.1617111,
+  "lon": 129.1726932,
+  "tags": {
+    "bench": "yes",
+    "highway": "bus_stop",
+    "name": "미포 문탠로드입구",
+    "name:ja": "尾浦ムンテンロド入口",
+    "public_transport": "platform",
+    "shelter": "yes",
+    "stop_id": "09021",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 4984075584,
+  "lat": 35.1614618,
+  "lon": 129.1725062,
+  "tags": {
+    "bench": "yes",
+    "highway": "bus_stop",
+    "name": "미포 문탠로드입구",
+    "name:ja": "尾浦ムンテンロード入口",
+    "public_transport": "platform",
+    "shelter": "yes",
+    "stop_id": "09019",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 5004041098,
+  "lat": 35.1238537,
+  "lon": 129.1123827,
+  "tags": {
+    "highway": "bus_stop",
+    "name": "이기대입구.용호복지회관",
+    "stop_id": "07131"
+  }
+},
+{
+  "type": "node",
+  "id": 5065720021,
+  "lat": 35.1642021,
+  "lon": 129.1961757,
+  "tags": {
+    "name": "청사포다릿돌전망대",
+    "name:en": "Cheongsapo Daritdol Skywalk",
+    "note": "들머리에서 나눠주는 보호덧신을 신어야 들어갈 수 있습니다.\n(Visitors must wear protective sandals distributed at the entrance to enter.)",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 5450264422,
+  "lat": 35.0773961,
+  "lon": 129.0456513,
+  "tags": {
+    "name": "흰여울문화마을",
+    "name:ja": "フィニョウル文化村",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 6566766585,
+  "lat": 35.0833700,
+  "lon": 128.8666913,
+  "tags": {
+    "name": "갈맷길 (녹산)",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 6568809185,
+  "lat": 35.0833642,
+  "lon": 128.8665515,
+  "tags": {
+    "name": "갈맷길 (녹산)",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 6569108985,
+  "lat": 35.0833714,
+  "lon": 128.8663784,
+  "tags": {
+    "name": "갈맷길 (녹산)",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 6595739320,
+  "lat": 35.1249297,
+  "lon": 129.1125795,
+  "tags": {
+    "highway": "traffic_signals",
+    "name": "이기대어귀삼거리",
+    "name:en": "Igidaeeogwi Three Way Intersection",
+    "name:ko": "이기대어귀삼거리",
+    "name:ko-Latn": "Igidaeeogwisamgeori",
+    "traffic_signals": "signal"
+  }
+},
+{
+  "type": "node",
+  "id": 6885874785,
+  "lat": 35.1238169,
+  "lon": 129.1140174,
+  "tags": {
+    "addr:street": "86-23 Yongho-dong, Nam-gu, Busan, South Korea",
+    "amenity": "restaurant",
+    "cuisine": "korean",
+    "internet_access": "wlan",
+    "name": "부산 이기대맛집 착한생오리",
+    "name:en": "Grilled Duck Restaurant",
+    "opening_hours": "Mo-Su 11:00-22:00",
+    "phone": "+82 51-611-8282",
+    "website": "https://duck8282.modoo.at"
+  }
+},
+{
+  "type": "node",
+  "id": 6899897386,
+  "lat": 35.1191555,
+  "lon": 129.0283860,
+  "tags": {
+    "addr:housenumber": "0514670289",
+    "name": "이바구캠프",
+    "phone": "0514670289",
+    "tourism": "attraction",
+    "website": "http://www.ibagucamp.com"
+  }
+},
+{
+  "type": "node",
+  "id": 7218315682,
+  "lat": 35.0792523,
+  "lon": 128.9084220,
+  "tags": {
+    "amenity": "shelter",
+    "name": "갈맷길쉼터",
+    "shelter_type": "gazebo"
+  }
+},
+{
+  "type": "node",
+  "id": 8067623886,
+  "lat": 35.1031495,
+  "lon": 129.0266732,
+  "tags": {
+    "name": "보수동책방골목문화관",
+    "tourism": "museum"
+  }
+},
+{
+  "type": "node",
+  "id": 9738865607,
+  "lat": 35.1633528,
+  "lon": 129.1952531,
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "해운대구",
+    "addr:housenumber": "167",
+    "addr:street": "청사포로",
+    "information": "office",
+    "name": "청사포다릿돌전망대 관광안내소",
+    "tourism": "information"
+  }
+},
+{
+  "type": "node",
+  "id": 10250203593,
+  "lat": 35.0374700,
+  "lon": 128.9713500,
+  "tags": {
+    "ele": "22",
+    "name": "몰운대",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 10647920294,
+  "lat": 35.0757573,
+  "lon": 129.0485711,
+  "tags": {
+    "name": "흰여울전망대",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 11287428606,
+  "lat": 35.1584585,
+  "lon": 129.0119392,
+  "tags": {
+    "information": "board",
+    "name": "갈맷길인증대(주례정)",
+    "tourism": "information"
+  }
+},
+{
+  "type": "node",
+  "id": 11332204654,
+  "lat": 35.2440805,
+  "lon": 129.0565480,
+  "tags": {
+    "information": "board",
+    "name": "금정산성먹거리촌",
+    "tourism": "information"
+  }
+},
+{
+  "type": "node",
+  "id": 12062982599,
+  "lat": 35.1641142,
+  "lon": 129.1959838,
+  "tags": {
+    "name": "다릿돌전망대",
+    "name:en": "Daritdol Skywalk",
+    "name:ko": "다릿돌전망대",
+    "operator": "해운대블루라인",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "B5",
+    "station": "tram",
+    "tram": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12497403201,
+  "lat": 35.1303912,
+  "lon": 129.1209257,
+  "tags": {
+    "name": "이기대출렁다리",
+    "name:en": "Igidae Suspension Bridge",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 12652067834,
+  "lat": 35.1250466,
+  "lon": 129.1126169,
+  "tags": {
+    "highway": "traffic_signals",
+    "name": "이기대어귀삼거리",
+    "name:en": "Igidaeeogwi Three Way Intersection",
+    "name:ko": "이기대어귀삼거리",
+    "name:ko-Latn": "Igidaeeogwisamgeori",
+    "traffic_signals": "signal"
+  }
+},
+{
+  "type": "node",
+  "id": 12817477566,
+  "lat": 35.1555385,
+  "lon": 129.1773607,
+  "tags": {
+    "name": "달맞이터널",
+    "name:en": "Dalmaji Tunnel",
+    "name:ko": "달맞이터널",
+    "operator": "해운대블루라인",
+    "public_transport": "stop_position",
+    "railway": "tram_stop",
+    "tram": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12817542739,
+  "lat": 35.1642175,
+  "lon": 129.1960046,
+  "tags": {
+    "name": "다릿돌전망대",
+    "name:de": "Busan Brücke mit Glasboden",
+    "name:en": "Daritdol Skywalk",
+    "name:ko": "다릿돌전망대",
+    "operator": "해운대블루라인",
+    "public_transport": "stop_position",
+    "railway": "tram_stop",
+    "tram": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12817542744,
+  "lat": 35.1555078,
+  "lon": 129.1773524,
+  "tags": {
+    "name": "달맞이터널",
+    "name:en": "Dalmaji Tunnel",
+    "name:ko": "달맞이터널",
+    "operator": "해운대블루라인",
+    "public_transport": "station",
+    "ref": "B2",
+    "tram": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13860061062,
+  "lat": 35.0379682,
+  "lon": 128.9708293,
+  "tags": {
+    "name": "몰운대전망대",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 13860108530,
+  "lat": 35.0419069,
+  "lon": 128.9686736,
+  "tags": {
+    "historic": "memorial",
+    "memorial": "stele",
+    "name": "몰운대시비"
+  }
+},
+{
+  "type": "node",
+  "id": 13963486264,
+  "lat": 35.0273443,
+  "lon": 128.8342854,
+  "tags": {
+    "information": "board",
+    "name": "갈맷길안내도",
+    "tourism": "information"
+  }
+},
+{
+  "type": "node",
+  "id": 14143484489,
+  "lat": 35.1160712,
+  "lon": 129.0397395,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "noodle",
+    "name": "1984이바구밀면",
+    "name:ko": "1984이바구밀면"
+  }
+},
+{
+  "type": "node",
+  "id": 14213645903,
+  "lat": 35.1561333,
+  "lon": 129.0584906,
+  "tags": {
+    "addr:housenumber": "19",
+    "addr:street": "서면로68번길",
+    "amenity": "restaurant",
+    "name": "1984 이바구밀면&국밥"
+  }
+},
+{
+  "type": "way",
+  "id": 37398117,
+  "center": {
+    "lat": 35.1627397,
+    "lon": 129.1849448
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "달맞이길",
+    "name:en": "Dalmaji-gil",
+    "name:ko": "달맞이길"
+  }
+},
+{
+  "type": "way",
+  "id": 37399935,
+  "center": {
+    "lat": 35.1618067,
+    "lon": 129.1676428
+  },
+  "tags": {
+    "highway": "tertiary",
+    "lane_markings": "yes",
+    "name": "달맞이길",
+    "name:en": "Dalmaji-gil",
+    "name:ko": "달맞이길",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 37399936,
+  "center": {
+    "lat": 35.1794512,
+    "lon": 129.1952233
+  },
+  "tags": {
+    "cycleway:right": "no",
+    "highway": "secondary",
+    "lanes": "3",
+    "name": "달맞이길",
+    "name:en": "Dalmaji-gil",
+    "name:ko": "달맞이길",
+    "noref": "yes",
+    "oneway": "yes",
+    "sidewalk:left": "no",
+    "sidewalk:right": "separate",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 37400596,
+  "center": {
+    "lat": 35.1603051,
+    "lon": 129.1709394
+  },
+  "tags": {
+    "cycleway:both": "no",
+    "highway": "residential",
+    "name": "달맞이길62번길",
+    "name:en": "Dalmaji-gil 62beon-gil",
+    "name:ko": "달맞이길62번길",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 37400941,
+  "center": {
+    "lat": 35.0922998,
+    "lon": 129.0397474
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ko": "절영로",
+    "oneway": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 37402577,
+  "center": {
+    "lat": 35.0744861,
+    "lon": 129.0727438
+  },
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ja": "絶影路",
+    "name:ko": "절영로",
+    "name:zh": "絶影路",
+    "oneway": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 37403322,
+  "center": {
+    "lat": 35.1589987,
+    "lon": 129.1758659
+  },
+  "tags": {
+    "highway": "living_street",
+    "maxspeed": "30",
+    "name": "달맞이길65번길",
+    "name:en": "Dalmaji-gil 65beon-gil",
+    "name:ko": "달맞이길65번길",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 67785198,
+  "center": {
+    "lat": 35.1786956,
+    "lon": 129.1945703
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "달맞이길",
+    "name:en": "Dalmaji-gil",
+    "name:ko": "달맞이길",
+    "oneway": "yes",
+    "sidewalk:left": "no",
+    "sidewalk:right": "separate",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 113575843,
+  "center": {
+    "lat": 35.0480356,
+    "lon": 128.9704251
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "몰운대2길",
+    "name:en": "Morundae 2-gil",
+    "name:ko": "몰운대2길",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 117608557,
+  "center": {
+    "lat": 35.0875014,
+    "lon": 129.0403879
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "절영로93번길",
+    "name:en": "Jeoryeong-ro 93beon-gil",
+    "name:ko": "절영로93번길"
+  }
+},
+{
+  "type": "way",
+  "id": 117608562,
+  "center": {
+    "lat": 35.0872469,
+    "lon": 129.0410811
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "절영로101번길",
+    "name:en": "Jeoryeong-ro 101beon-gil",
+    "name:ko": "절영로101번길"
+  }
+},
+{
+  "type": "way",
+  "id": 117608563,
+  "center": {
+    "lat": 35.0901808,
+    "lon": 129.0402034
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "절영로43번길",
+    "name:en": "Jeoryeong-ro 43beon-gil",
+    "name:ko": "절영로43번길"
+  }
+},
+{
+  "type": "way",
+  "id": 117608565,
+  "center": {
+    "lat": 35.0905244,
+    "lon": 129.0412960
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "절영로35번길",
+    "name:en": "Jeoryeong-ro 35beon-gil",
+    "name:ko": "절영로35번길"
+  }
+},
+{
+  "type": "way",
+  "id": 117608566,
+  "center": {
+    "lat": 35.0911153,
+    "lon": 129.0411392
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "절영로29번길",
+    "name:en": "Jeoryeong-ro 29beon-gil",
+    "name:ko": "절영로29번길"
+  }
+},
+{
+  "type": "way",
+  "id": 117608584,
+  "center": {
+    "lat": 35.0932684,
+    "lon": 129.0394038
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "절영로14번길",
+    "name:en": "Jeoryeong-ro 14beon-gil",
+    "name:ko": "절영로14번길"
+  }
+},
+{
+  "type": "way",
+  "id": 117608589,
+  "center": {
+    "lat": 35.0923350,
+    "lon": 129.0422840
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "절영로13번길",
+    "name:en": "Jeoryeong-ro 13beon-gil",
+    "name:ko": "절영로13번길"
+  }
+},
+{
+  "type": "way",
+  "id": 129168506,
+  "center": {
+    "lat": 35.1108143,
+    "lon": 129.1055774
+  },
+  "tags": {
+    "highway": "path",
+    "name": "이기대둘랫길"
+  }
+},
+{
+  "type": "way",
+  "id": 154253041,
+  "center": {
+    "lat": 35.1801282,
+    "lon": 129.1994269
+  },
+  "tags": {
+    "electrified": "rail",
+    "gauge": "1435",
+    "maxspeed": "4",
+    "name": "해운대 블루라인",
+    "name:en": "Haeundae Blue-line",
+    "name:ja": "海雲台ブルーライン",
+    "name:ko": "해운대블루라인 해변열차",
+    "name:zh": "海雲臺藍線",
+    "operator": "해운대블루라인(주)",
+    "railway": "tram",
+    "service": "siding",
+    "usage": "tourism",
+    "voltage": "48",
+    "website": "https://www.bluelinepark.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 165386548,
+  "center": {
+    "lat": 35.0856592,
+    "lon": 129.0416730
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ko": "절영로",
+    "oneway": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 165393177,
+  "center": {
+    "lat": 35.0706806,
+    "lon": 129.0687180
+  },
+  "tags": {
+    "cycleway": "opposite_lane",
+    "highway": "secondary",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ko": "절영로",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 165393181,
+  "center": {
+    "lat": 35.0742306,
+    "lon": 129.0554885
+  },
+  "tags": {
+    "highway": "secondary",
+    "lanes": "1",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ko": "절영로",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 167174062,
+  "center": {
+    "lat": 35.1235334,
+    "lon": 129.1149175
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "이기대공원로26번길"
+  }
+},
+{
+  "type": "way",
+  "id": 167174076,
+  "center": {
+    "lat": 35.1233315,
+    "lon": 129.1138941
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "이기대공원로12번길"
+  }
+},
+{
+  "type": "way",
+  "id": 168104407,
+  "center": {
+    "lat": 35.1604585,
+    "lon": 129.1830339
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번가길",
+    "name:en": "Dalmaji-gil 117beonga-gil",
+    "name:ko": "달맞이길117번가길"
+  }
+},
+{
+  "type": "way",
+  "id": 168104409,
+  "center": {
+    "lat": 35.1590408,
+    "lon": 129.1781860
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번다길",
+    "name:en": "Dalmaji-gil 117beonda-gil",
+    "name:ko": "달맞이길117번다길"
+  }
+},
+{
+  "type": "way",
+  "id": 168104410,
+  "center": {
+    "lat": 35.1594474,
+    "lon": 129.1759304
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번길",
+    "name:en": "Dalmaji-gil 117beon-gil",
+    "name:ko": "달맞이길117번길",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 168104412,
+  "center": {
+    "lat": 35.1580608,
+    "lon": 129.1789233
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번가길",
+    "name:en": "Dalmaji-gil 117beonga-gil",
+    "name:ko": "달맞이길117번가길"
+  }
+},
+{
+  "type": "way",
+  "id": 168104414,
+  "center": {
+    "lat": 35.1593019,
+    "lon": 129.1788016
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번다길",
+    "name:en": "Dalmaji-gil 117beonda-gil",
+    "name:ko": "달맞이길117번다길"
+  }
+},
+{
+  "type": "way",
+  "id": 168104415,
+  "center": {
+    "lat": 35.1605095,
+    "lon": 129.1824433
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번나길",
+    "name:en": "Dalmaji-gil 117beonna-gil",
+    "name:ko": "달맞이길117번나길"
+  }
+},
+{
+  "type": "way",
+  "id": 168104418,
+  "center": {
+    "lat": 35.1590402,
+    "lon": 129.1749267
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번길",
+    "name:en": "Dalmaji-gil 117beon-gil",
+    "name:ko": "달맞이길117번길"
+  }
+},
+{
+  "type": "way",
+  "id": 168105402,
+  "center": {
+    "lat": 35.1628542,
+    "lon": 129.1830156
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번라길",
+    "name:en": "Dalmaji-gil 117beonra-gil",
+    "name:ko": "달맞이길117번라길"
+  }
+},
+{
+  "type": "way",
+  "id": 168105407,
+  "center": {
+    "lat": 35.1627711,
+    "lon": 129.1836711
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번나길",
+    "name:en": "Dalmaji-gil 117beonna-gil",
+    "name:ko": "달맞이길117번나길"
+  }
+},
+{
+  "type": "way",
+  "id": 168105410,
+  "center": {
+    "lat": 35.1598960,
+    "lon": 129.1808078
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번다길",
+    "name:en": "Dalmaji-gil 117beonda-gil",
+    "name:ko": "달맞이길117번다길"
+  }
+},
+{
+  "type": "way",
+  "id": 168105411,
+  "center": {
+    "lat": 35.1634108,
+    "lon": 129.1842785
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번나길",
+    "name:en": "Dalmaji-gil 117beonna-gil",
+    "name:ko": "달맞이길117번나길"
+  }
+},
+{
+  "type": "way",
+  "id": 168105421,
+  "center": {
+    "lat": 35.1607844,
+    "lon": 129.1810602
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번라길",
+    "name:en": "Dalmaji-gil 117beonra-gil",
+    "name:ko": "달맞이길117번라길"
+  }
+},
+{
+  "type": "way",
+  "id": 168105425,
+  "center": {
+    "lat": 35.1616724,
+    "lon": 129.1827123
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번다길",
+    "name:en": "Dalmaji-gil 117beonda-gil",
+    "name:ko": "달맞이길117번다길"
+  }
+},
+{
+  "type": "way",
+  "id": 168413324,
+  "center": {
+    "lat": 35.1712269,
+    "lon": 129.1904879
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "달맞이길",
+    "name:en": "Dalmaji-gil",
+    "name:ja": "タルマジギル",
+    "name:ko": "달맞이길",
+    "sidewalk:left": "no",
+    "sidewalk:right": "separate",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 168413328,
+  "center": {
+    "lat": 35.1642889,
+    "lon": 129.1860479
+  },
+  "tags": {
+    "bridge": "yes",
+    "bridge:structure": "beam",
+    "highway": "tertiary",
+    "layer": "1",
+    "name": "달맞이길",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 239277610,
+  "center": {
+    "lat": 35.1615562,
+    "lon": 129.1656117
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "달맞이길",
+    "name:en": "Dalmaji-gil",
+    "name:ko": "달맞이길",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 279385018,
+  "center": {
+    "lat": 35.1167280,
+    "lon": 129.1196149
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "이기대공원로",
+    "name:en": "Igidaegongwon-ro",
+    "name:ja": "二妓台公園路",
+    "name:ko": "이기대공원로"
+  }
+},
+{
+  "type": "way",
+  "id": 371493707,
+  "center": {
+    "lat": 35.2504926,
+    "lon": 129.1105314
+  },
+  "tags": {
+    "highway": "path",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 374496967,
+  "center": {
+    "lat": 35.1919542,
+    "lon": 129.2238832
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "footway",
+    "name": "갈맷길",
+    "name:ja": "カルメッキル"
+  }
+},
+{
+  "type": "way",
+  "id": 382693934,
+  "center": {
+    "lat": 35.0962903,
+    "lon": 129.0087976
+  },
+  "tags": {
+    "name": "감천문화마을",
+    "name:en": "Gamcheon Culture Village",
+    "name:ja": "甘川文化村",
+    "name:zh": "甘川文化村",
+    "tourism": "attraction",
+    "website": "https://www.gamcheon.or.kr/",
+    "wikidata": "Q18641306",
+    "wikipedia": "ko:감천문화마을"
+  }
+},
+{
+  "type": "way",
+  "id": 383386052,
+  "center": {
+    "lat": 35.1596960,
+    "lon": 129.1819443
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "해운대 달맞이공원",
+    "name:ja": "海雲台 ダルマジ公園"
+  }
+},
+{
+  "type": "way",
+  "id": 469326070,
+  "center": {
+    "lat": 35.2109902,
+    "lon": 129.0888901
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "동래구",
+    "amenity": "parking",
+    "building": "parking",
+    "name": "동래읍성주차장",
+    "parking": "multi-storey"
+  }
+},
+{
+  "type": "way",
+  "id": 470629998,
+  "center": {
+    "lat": 35.0543311,
+    "lon": 128.9638057
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "사하구",
+    "addr:housenumber": "100",
+    "addr:postcode": "49497",
+    "addr:street": "다대낙조2길",
+    "addr:subdistrict": "다대동",
+    "landuse": "residential",
+    "name": "롯데캐슬몰운대아파트 4단지",
+    "residential": "apartments"
+  }
+},
+{
+  "type": "way",
+  "id": 470630007,
+  "center": {
+    "lat": 35.0548864,
+    "lon": 128.9631316
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "사하구",
+    "addr:street": "다대낙조2길",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "몰운대초등학교",
+    "wikidata": "Q21058009"
+  }
+},
+{
+  "type": "way",
+  "id": 472625420,
+  "center": {
+    "lat": 35.0839606,
+    "lon": 128.9041572
+  },
+  "tags": {
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "footway",
+    "horse": "no",
+    "motor_vehicle": "no",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 475757200,
+  "center": {
+    "lat": 35.2091445,
+    "lon": 129.0869934
+  },
+  "tags": {
+    "name": "동래읍성",
+    "name:ja": "東莱邑城",
+    "natural": "wood"
+  }
+},
+{
+  "type": "way",
+  "id": 475767154,
+  "center": {
+    "lat": 35.0727868,
+    "lon": 129.0626761
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "영도구",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "절영초등학교",
+    "wikidata": "Q21060167"
+  }
+},
+{
+  "type": "way",
+  "id": 475826972,
+  "center": {
+    "lat": 35.2086789,
+    "lon": 129.0901876
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "name": "동래읍성 성벽"
+  }
+},
+{
+  "type": "way",
+  "id": 499052192,
+  "center": {
+    "lat": 35.1619810,
+    "lon": 129.1841918
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "해운대구",
+    "addr:subdistrict": "중동",
+    "landuse": "residential",
+    "name": "달맞이우성빌라트",
+    "residential": "apartments"
+  }
+},
+{
+  "type": "way",
+  "id": 500097051,
+  "center": {
+    "lat": 35.0928277,
+    "lon": 129.0423658
+  },
+  "tags": {
+    "highway": "service",
+    "name": "절영로7번길",
+    "name:en": "Jeoryeong-ro 7beon-gil",
+    "name:ko": "절영로7번길"
+  }
+},
+{
+  "type": "way",
+  "id": 500097052,
+  "center": {
+    "lat": 35.0920168,
+    "lon": 129.0416146
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "절영로19번길",
+    "name:en": "Jeoryeong-ro 19beon-gil",
+    "name:ko": "절영로19번길"
+  }
+},
+{
+  "type": "way",
+  "id": 501581472,
+  "center": {
+    "lat": 35.0371020,
+    "lon": 128.8482654
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "path",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 501581473,
+  "center": {
+    "lat": 35.0353611,
+    "lon": 128.8466103
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "path",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 501581480,
+  "center": {
+    "lat": 35.0229551,
+    "lon": 128.8396181
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "path",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 501581485,
+  "center": {
+    "lat": 35.0533576,
+    "lon": 128.8310980
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "residential",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 501992470,
+  "center": {
+    "lat": 35.1576751,
+    "lon": 129.1813631
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번가길",
+    "name:en": "Dalmaji-gil 117beonga-gil",
+    "name:ko": "달맞이길117번가길"
+  }
+},
+{
+  "type": "way",
+  "id": 501992471,
+  "center": {
+    "lat": 35.1572313,
+    "lon": 129.1784435
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길65번길",
+    "name:en": "Dalmaji-gil 65beon-gil",
+    "name:ko": "달맞이길65번길"
+  }
+},
+{
+  "type": "way",
+  "id": 502017031,
+  "center": {
+    "lat": 35.1615675,
+    "lon": 129.1663900
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "달맞이길",
+    "name:en": "Dalmaji-gil",
+    "name:ko": "달맞이길"
+  }
+},
+{
+  "type": "way",
+  "id": 502017035,
+  "center": {
+    "lat": 35.1598673,
+    "lon": 129.1720032
+  },
+  "tags": {
+    "highway": "service",
+    "name": "달맞이길62번길",
+    "name:en": "Dalmaji-gil 62beon-gil",
+    "name:ko": "달맞이길62번길"
+  }
+},
+{
+  "type": "way",
+  "id": 502028816,
+  "center": {
+    "lat": 35.1606444,
+    "lon": 129.1731004
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길65번길",
+    "name:en": "Dalmaji-gil 65beon-gil",
+    "name:ko": "달맞이길65번길",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 502257509,
+  "center": {
+    "lat": 35.1035526,
+    "lon": 129.0271752
+  },
+  "tags": {
+    "highway": "service",
+    "name": "책방골목길",
+    "name:en": "Chaekbanggolmok-gil",
+    "name:ko": "책방골목길"
+  }
+},
+{
+  "type": "way",
+  "id": 502257510,
+  "center": {
+    "lat": 35.1036955,
+    "lon": 129.0266852
+  },
+  "tags": {
+    "highway": "service",
+    "name": "책방골목길",
+    "name:en": "Chaekbanggolmok-gil",
+    "name:ko": "책방골목길"
+  }
+},
+{
+  "type": "way",
+  "id": 502275473,
+  "center": {
+    "lat": 35.1605114,
+    "lon": 129.1751843
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길65번길",
+    "name:en": "Dalmaji-gil 65beon-gil",
+    "name:ko": "달맞이길65번길"
+  }
+},
+{
+  "type": "way",
+  "id": 502275480,
+  "center": {
+    "lat": 35.1599720,
+    "lon": 129.1727492
+  },
+  "tags": {
+    "highway": "service",
+    "name": "달맞이길",
+    "name:en": "Dalmaji-gil",
+    "name:ko": "달맞이길"
+  }
+},
+{
+  "type": "way",
+  "id": 502277584,
+  "center": {
+    "lat": 35.1594263,
+    "lon": 129.1707402
+  },
+  "tags": {
+    "highway": "service",
+    "name": "달맞이길62번가길",
+    "name:en": "Dalmaji-gil 62beonga-gil",
+    "name:ko": "달맞이길62번가길"
+  }
+},
+{
+  "type": "way",
+  "id": 502277585,
+  "center": {
+    "lat": 35.1592786,
+    "lon": 129.1711039
+  },
+  "tags": {
+    "highway": "service",
+    "name": "달맞이길62번가길",
+    "name:en": "Dalmaji-gil 62beonga-gil",
+    "name:ko": "달맞이길62번가길"
+  }
+},
+{
+  "type": "way",
+  "id": 502277588,
+  "center": {
+    "lat": 35.1588007,
+    "lon": 129.1716142
+  },
+  "tags": {
+    "highway": "service",
+    "name": "달맞이길62번가길",
+    "name:en": "Dalmaji-gil 62beonga-gil",
+    "name:ko": "달맞이길62번가길"
+  }
+},
+{
+  "type": "way",
+  "id": 502277589,
+  "center": {
+    "lat": 35.1584528,
+    "lon": 129.1721142
+  },
+  "tags": {
+    "highway": "service",
+    "name": "달맞이길62번가길",
+    "name:en": "Dalmaji-gil 62beonga-gil",
+    "name:ko": "달맞이길62번가길"
+  }
+},
+{
+  "type": "way",
+  "id": 502277590,
+  "center": {
+    "lat": 35.1587924,
+    "lon": 129.1712009
+  },
+  "tags": {
+    "highway": "service",
+    "name": "달맞이길62번가길",
+    "name:en": "Dalmaji-gil 62beonga-gil",
+    "name:ko": "달맞이길62번가길"
+  }
+},
+{
+  "type": "way",
+  "id": 502510255,
+  "center": {
+    "lat": 35.1042640,
+    "lon": 129.0260324
+  },
+  "tags": {
+    "highway": "service",
+    "name": "책방골목길",
+    "name:en": "Chaekbanggolmok-gil",
+    "name:ko": "책방골목길"
+  }
+},
+{
+  "type": "way",
+  "id": 502510256,
+  "center": {
+    "lat": 35.1038634,
+    "lon": 129.0263438
+  },
+  "tags": {
+    "highway": "service",
+    "name": "책방골목길",
+    "name:en": "Chaekbanggolmok-gil",
+    "name:ko": "책방골목길"
+  }
+},
+{
+  "type": "way",
+  "id": 502510257,
+  "center": {
+    "lat": 35.1038993,
+    "lon": 129.0263225
+  },
+  "tags": {
+    "highway": "service",
+    "name": "책방골목길",
+    "name:en": "Chaekbanggolmok-gil",
+    "name:ko": "책방골목길"
+  }
+},
+{
+  "type": "way",
+  "id": 502510258,
+  "center": {
+    "lat": 35.1037760,
+    "lon": 129.0263595
+  },
+  "tags": {
+    "highway": "service",
+    "name": "책방골목길",
+    "name:en": "Chaekbanggolmok-gil",
+    "name:ko": "책방골목길"
+  }
+},
+{
+  "type": "way",
+  "id": 502553768,
+  "center": {
+    "lat": 35.1609517,
+    "lon": 129.1704733
+  },
+  "tags": {
+    "highway": "service",
+    "name": "달맞이길50번길",
+    "name:en": "Dalmaji-gil 50beon-gil",
+    "name:ko": "달맞이길50번길"
+  }
+},
+{
+  "type": "way",
+  "id": 502553769,
+  "center": {
+    "lat": 35.1608697,
+    "lon": 129.1707061
+  },
+  "tags": {
+    "highway": "service",
+    "name": "달맞이길50번길",
+    "name:en": "Dalmaji-gil 50beon-gil",
+    "name:ko": "달맞이길50번길"
+  }
+},
+{
+  "type": "way",
+  "id": 502553770,
+  "center": {
+    "lat": 35.1610045,
+    "lon": 129.1707673
+  },
+  "tags": {
+    "highway": "service",
+    "name": "달맞이길",
+    "name:en": "Dalmaji-gil",
+    "name:ko": "달맞이길"
+  }
+},
+{
+  "type": "way",
+  "id": 502553771,
+  "center": {
+    "lat": 35.1609057,
+    "lon": 129.1710178
+  },
+  "tags": {
+    "highway": "service",
+    "name": "달맞이길62번길",
+    "name:en": "Dalmaji-gil 62beon-gil",
+    "name:ko": "달맞이길62번길"
+  }
+},
+{
+  "type": "way",
+  "id": 502553772,
+  "center": {
+    "lat": 35.1609108,
+    "lon": 129.1707169
+  },
+  "tags": {
+    "highway": "service",
+    "name": "달맞이길50번길",
+    "name:en": "Dalmaji-gil 50beon-gil",
+    "name:ko": "달맞이길50번길"
+  }
+},
+{
+  "type": "way",
+  "id": 504637308,
+  "center": {
+    "lat": 35.1596236,
+    "lon": 129.1665850
+  },
+  "tags": {
+    "highway": "footway",
+    "name": "갈맷길",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 504637309,
+  "center": {
+    "lat": 35.1593672,
+    "lon": 129.1686297
+  },
+  "tags": {
+    "highway": "footway",
+    "lit": "yes",
+    "name": "갈맷길",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 504639813,
+  "center": {
+    "lat": 35.1641361,
+    "lon": 129.1840539
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "달맞이길117번나길",
+    "name:en": "Dalmaji-gil 117beonna-gil",
+    "name:ko": "달맞이길117번나길"
+  }
+},
+{
+  "type": "way",
+  "id": 504639836,
+  "center": {
+    "lat": 35.1580459,
+    "lon": 129.1788318
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번가길",
+    "name:en": "Dalmaji-gil 117beonga-gil",
+    "name:ko": "달맞이길117번가길"
+  }
+},
+{
+  "type": "way",
+  "id": 507420440,
+  "center": {
+    "lat": 35.1623747,
+    "lon": 129.1833535
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번라길",
+    "name:en": "Dalmaji-gil 117beonra-gil",
+    "name:ko": "달맞이길117번라길"
+  }
+},
+{
+  "type": "way",
+  "id": 507420441,
+  "center": {
+    "lat": 35.1591358,
+    "lon": 129.1775571
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번다길",
+    "name:en": "Dalmaji-gil 117beonda-gil",
+    "name:ko": "달맞이길117번다길"
+  }
+},
+{
+  "type": "way",
+  "id": 507420442,
+  "center": {
+    "lat": 35.1583723,
+    "lon": 129.1798145
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번나길",
+    "name:en": "Dalmaji-gil 117beonna-gil",
+    "name:ko": "달맞이길117번나길"
+  }
+},
+{
+  "type": "way",
+  "id": 507420443,
+  "center": {
+    "lat": 35.1584701,
+    "lon": 129.1815529
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "달맞이길117번가길",
+    "name:en": "Dalmaji-gil 117beonga-gil",
+    "name:ko": "달맞이길117번가길"
+  }
+},
+{
+  "type": "way",
+  "id": 507420446,
+  "center": {
+    "lat": 35.1580813,
+    "lon": 129.1743004
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "service",
+    "name": "달맞이길104번길",
+    "name:en": "Dalmaji-gil 104beon-gil",
+    "name:ko": "달맞이길104번길"
+  }
+},
+{
+  "type": "way",
+  "id": 507420447,
+  "center": {
+    "lat": 35.1579074,
+    "lon": 129.1739952
+  },
+  "tags": {
+    "highway": "service",
+    "name": "달맞이길104번길",
+    "name:en": "Dalmaji-gil 104beon-gil",
+    "name:ko": "달맞이길104번길"
+  }
+},
+{
+  "type": "way",
+  "id": 507420448,
+  "center": {
+    "lat": 35.1567017,
+    "lon": 129.1799729
+  },
+  "tags": {
+    "cycleway:both": "no",
+    "foot": "yes",
+    "highway": "tertiary",
+    "name": "달맞이길",
+    "name:en": "Dalmaji-gil",
+    "name:ja": "タルマジギル",
+    "name:ko": "달맞이길",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 507420449,
+  "center": {
+    "lat": 35.1605327,
+    "lon": 129.1836900
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "tertiary",
+    "name": "달맞이길",
+    "name:en": "Dalmaji-gil",
+    "name:ja": "タルマジギル",
+    "name:ko": "달맞이길",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 507420451,
+  "center": {
+    "lat": 35.1588334,
+    "lon": 129.1750004
+  },
+  "tags": {
+    "highway": "tertiary",
+    "lane_markings": "yes",
+    "name": "달맞이길",
+    "name:en": "Dalmaji-gil",
+    "name:ja": "タルマジギル",
+    "name:ko": "달맞이길",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 509123639,
+  "center": {
+    "lat": 35.1613182,
+    "lon": 129.1710828
+  },
+  "tags": {
+    "cycleway:right": "no",
+    "highway": "secondary",
+    "lanes": "4",
+    "name": "달맞이길",
+    "name:en": "Dalmaji-gil",
+    "name:ko": "달맞이길",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 511894550,
+  "center": {
+    "lat": 35.0877766,
+    "lon": 129.0396085
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ko": "절영로",
+    "oneway": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 516477364,
+  "center": {
+    "lat": 35.1428306,
+    "lon": 129.1170775
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "pedestrian",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 516477367,
+  "center": {
+    "lat": 35.1359917,
+    "lon": 129.1131211
+  },
+  "tags": {
+    "highway": "footway",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 516480913,
+  "center": {
+    "lat": 35.1595448,
+    "lon": 129.1410308
+  },
+  "tags": {
+    "highway": "footway",
+    "name": "갈맷길",
+    "name:ja": "カルメッキル"
+  }
+},
+{
+  "type": "way",
+  "id": 516480914,
+  "center": {
+    "lat": 35.1613232,
+    "lon": 129.1392709
+  },
+  "tags": {
+    "highway": "footway",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 516480915,
+  "center": {
+    "lat": 35.1548878,
+    "lon": 129.1237942
+  },
+  "tags": {
+    "footway": "sidewalk",
+    "highway": "footway",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 518192030,
+  "center": {
+    "lat": 35.2239478,
+    "lon": 129.2268294
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "residential",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 533236145,
+  "center": {
+    "lat": 35.1252029,
+    "lon": 129.0355280
+  },
+  "tags": {
+    "fixme": "is this a route?",
+    "foot": "yes",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 535386653,
+  "center": {
+    "lat": 35.2443228,
+    "lon": 129.2219818
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "residential",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 561276934,
+  "center": {
+    "lat": 35.1316370,
+    "lon": 129.1198939
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "residential",
+    "name": "이기대공원로"
+  }
+},
+{
+  "type": "way",
+  "id": 569351888,
+  "center": {
+    "lat": 35.2039316,
+    "lon": 129.0938286
+  },
+  "tags": {
+    "historic": "archaeological_site",
+    "name": "동래읍성 동장대"
+  }
+},
+{
+  "type": "way",
+  "id": 569351889,
+  "center": {
+    "lat": 35.2030750,
+    "lon": 129.0938819
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "name": "동래읍성 성벽"
+  }
+},
+{
+  "type": "way",
+  "id": 569351891,
+  "center": {
+    "lat": 35.2037791,
+    "lon": 129.0939444
+  },
+  "tags": {
+    "historic": "archaeological_site",
+    "name": "동래읍성 동장대"
+  }
+},
+{
+  "type": "way",
+  "id": 574854575,
+  "center": {
+    "lat": 35.0657580,
+    "lon": 128.8411225
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "residential",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 574854593,
+  "center": {
+    "lat": 35.0684022,
+    "lon": 128.8394809
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "residential",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 575120383,
+  "center": {
+    "lat": 35.0453644,
+    "lon": 128.9689728
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "몰운대1길",
+    "name:en": "Morundae 1-gil",
+    "name:ja": "沒雲台キル",
+    "name:ko": "몰운대1길",
+    "name:ko-Latn": "Morundae 1-gil",
+    "noref": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 619878639,
+  "center": {
+    "lat": 35.1282716,
+    "lon": 129.1187678
+  },
+  "tags": {
+    "highway": "unclassified",
+    "name": "이기대공원로",
+    "name:en": "Igidaegongwon-ro",
+    "name:ko": "이기대공원로"
+  }
+},
+{
+  "type": "way",
+  "id": 624370417,
+  "center": {
+    "lat": 35.0797143,
+    "lon": 129.0444348
+  },
+  "tags": {
+    "highway": "secondary",
+    "lanes": "1",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ko": "절영로",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 643844236,
+  "center": {
+    "lat": 35.0741250,
+    "lon": 129.0720530
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "영도구",
+    "landuse": "residential",
+    "name": "동삼절영3차아파트",
+    "residential": "apartments"
+  }
+},
+{
+  "type": "way",
+  "id": 643844237,
+  "center": {
+    "lat": 35.0727947,
+    "lon": 129.0716370
+  },
+  "tags": {
+    "highway": "service",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ko": "절영로"
+  }
+},
+{
+  "type": "way",
+  "id": 654426675,
+  "center": {
+    "lat": 35.1303878,
+    "lon": 129.1172043
+  },
+  "tags": {
+    "bridge": "yes",
+    "foot": "yes",
+    "highway": "residential",
+    "layer": "1",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 667277396,
+  "center": {
+    "lat": 35.1784631,
+    "lon": 129.1200308
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "service",
+    "name": "갈맷길",
+    "name:ko": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 674027660,
+  "center": {
+    "lat": 35.1038382,
+    "lon": 129.0329764
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "residential",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 674030197,
+  "center": {
+    "lat": 35.1041667,
+    "lon": 129.0309921
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "residential",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 684518587,
+  "center": {
+    "lat": 35.1038676,
+    "lon": 129.0260215
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "책방골목길",
+    "name:en": "Chaekbanggolmok-gil",
+    "name:ko": "책방골목길",
+    "source": "survey",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 693676760,
+  "center": {
+    "lat": 35.1252396,
+    "lon": 129.1173293
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "남구",
+    "addr:subdistrict": "용호동",
+    "amenity": "place_of_worship",
+    "building": "church",
+    "denomination": "greek_catholic",
+    "name": "이기대성당",
+    "religion": "christian",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 694636574,
+  "center": {
+    "lat": 35.1304492,
+    "lon": 129.1169517
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "residential",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 702283462,
+  "center": {
+    "lat": 35.1396644,
+    "lon": 129.1156584
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 703440535,
+  "center": {
+    "lat": 35.2261941,
+    "lon": 129.1182544
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "path",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 759423424,
+  "center": {
+    "lat": 35.1032828,
+    "lon": 129.0269495
+  },
+  "tags": {
+    "highway": "footway",
+    "name": "책방골목길",
+    "name:en": "Chaekbanggolmok-gil",
+    "name:ko": "책방골목길",
+    "source": "survey",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 772121668,
+  "center": {
+    "lat": 35.0791755,
+    "lon": 128.8994616
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "갈맷길내 잔디공원"
+  }
+},
+{
+  "type": "way",
+  "id": 777381185,
+  "center": {
+    "lat": 35.0915484,
+    "lon": 129.0384987
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "절영로36번길",
+    "name:en": "Jeoryeong-ro 36beon-gil",
+    "name:ko": "절영로36번길"
+  }
+},
+{
+  "type": "way",
+  "id": 777392679,
+  "center": {
+    "lat": 35.0937085,
+    "lon": 129.0399580
+  },
+  "tags": {
+    "highway": "service",
+    "name": "절영로8번길",
+    "name:en": "Jeoryeong-ro 8beon-gil",
+    "name:ko": "절영로8번길"
+  }
+},
+{
+  "type": "way",
+  "id": 777392680,
+  "center": {
+    "lat": 35.0927804,
+    "lon": 129.0395803
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "절영로20번길",
+    "name:en": "Jeoryeong-ro 20beon-gil",
+    "name:ko": "절영로20번길"
+  }
+},
+{
+  "type": "way",
+  "id": 777392681,
+  "center": {
+    "lat": 35.0910527,
+    "lon": 129.0378568
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "절영로42번길",
+    "name:en": "Jeoryeong-ro 42beon-gil",
+    "name:ko": "절영로42번길"
+  }
+},
+{
+  "type": "way",
+  "id": 777392682,
+  "center": {
+    "lat": 35.0903164,
+    "lon": 129.0378005
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "절영로50번길",
+    "name:en": "Jeoryeong-ro 50beon-gil",
+    "name:ko": "절영로50번길"
+  }
+},
+{
+  "type": "way",
+  "id": 777392683,
+  "center": {
+    "lat": 35.0898601,
+    "lon": 129.0390490
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "절영로49번길",
+    "name:en": "Jeoryeong-ro 49beon-gil",
+    "name:ko": "절영로49번길"
+  }
+},
+{
+  "type": "way",
+  "id": 777392684,
+  "center": {
+    "lat": 35.0919990,
+    "lon": 129.0387540
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "절영로30번길",
+    "name:en": "Jeoryeong-ro 30beon-gil",
+    "name:ko": "절영로30번길"
+  }
+},
+{
+  "type": "way",
+  "id": 777392685,
+  "center": {
+    "lat": 35.0895544,
+    "lon": 129.0418991
+  },
+  "tags": {
+    "highway": "service",
+    "name": "절영로43번길",
+    "name:en": "Jeoryeong-ro 43beon-gil",
+    "name:ko": "절영로43번길"
+  }
+},
+{
+  "type": "way",
+  "id": 777392700,
+  "center": {
+    "lat": 35.0859131,
+    "lon": 129.0395345
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "절영로94번길",
+    "name:en": "Jeoryeong-ro 94beon-gil",
+    "name:ko": "절영로94번길"
+  }
+},
+{
+  "type": "way",
+  "id": 777392701,
+  "center": {
+    "lat": 35.0856603,
+    "lon": 129.0402140
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "절영로102번길",
+    "name:en": "Jeoryeong-ro 102beon-gil",
+    "name:ko": "절영로102번길"
+  }
+},
+{
+  "type": "way",
+  "id": 784850652,
+  "center": {
+    "lat": 35.1581718,
+    "lon": 129.1761795
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "해운대구",
+    "addr:subdistrict": "중동",
+    "building": "apartments",
+    "name": "달맞이아르미안아파트"
+  }
+},
+{
+  "type": "way",
+  "id": 785264513,
+  "center": {
+    "lat": 35.2091987,
+    "lon": 129.0893504
+  },
+  "tags": {
+    "museum": "history",
+    "name": "동래읍성역사관",
+    "tourism": "museum"
+  }
+},
+{
+  "type": "way",
+  "id": 785556359,
+  "center": {
+    "lat": 35.2657405,
+    "lon": 129.1116983
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "footway",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 785556360,
+  "center": {
+    "lat": 35.2620431,
+    "lon": 129.1093317
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "path",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 785556361,
+  "center": {
+    "lat": 35.2559151,
+    "lon": 129.1071989
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "path",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 785556363,
+  "center": {
+    "lat": 35.2510626,
+    "lon": 129.1101977
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "path",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 785556365,
+  "center": {
+    "lat": 35.2519738,
+    "lon": 129.1083713
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "service",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 789212891,
+  "center": {
+    "lat": 35.1578851,
+    "lon": 129.1723443
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "달맞이길62번길",
+    "name:en": "Dalmaji-gil 62beon-gil",
+    "name:ko": "달맞이길62번길"
+  }
+},
+{
+  "type": "way",
+  "id": 794826497,
+  "center": {
+    "lat": 35.1594105,
+    "lon": 129.1763434
+  },
+  "tags": {
+    "highway": "living_street",
+    "lane_markings": "no",
+    "lanes": "2",
+    "name": "달맞이길117번가길",
+    "name:en": "Dalmaji-gil 117beonga-gil",
+    "name:ko": "달맞이길117번가길",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 796491755,
+  "center": {
+    "lat": 35.0906777,
+    "lon": 129.0388593
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ko": "절영로",
+    "oneway": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 797760112,
+  "center": {
+    "lat": 35.0840594,
+    "lon": 129.0418695
+  },
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ko": "절영로",
+    "oneway": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 800570336,
+  "center": {
+    "lat": 35.0724279,
+    "lon": 129.0716724
+  },
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ja": "絶影路",
+    "name:ko": "절영로",
+    "name:zh": "絶影路",
+    "oneway": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 800639741,
+  "center": {
+    "lat": 35.1780270,
+    "lon": 129.1930091
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "달맞이길",
+    "name:en": "Dalmaji-gil",
+    "name:ko": "달맞이길",
+    "noref": "yes",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 800639742,
+  "center": {
+    "lat": 35.1783945,
+    "lon": 129.1929353
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "2",
+    "name": "달맞이길",
+    "name:en": "Dalmaji-gil",
+    "name:ko": "달맞이길",
+    "noref": "yes",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 821739349,
+  "center": {
+    "lat": 35.1682554,
+    "lon": 129.1412146
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "그린레일 산책로"
+  }
+},
+{
+  "type": "way",
+  "id": 821739350,
+  "center": {
+    "lat": 35.1657685,
+    "lon": 129.1428039
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "그린레일 산책로"
+  }
+},
+{
+  "type": "way",
+  "id": 821739351,
+  "center": {
+    "lat": 35.1631621,
+    "lon": 129.1451756
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "그린레일 산책로"
+  }
+},
+{
+  "type": "way",
+  "id": 821739352,
+  "center": {
+    "lat": 35.1624843,
+    "lon": 129.1464808
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "그린레일 산책로"
+  }
+},
+{
+  "type": "way",
+  "id": 821739353,
+  "center": {
+    "lat": 35.1616019,
+    "lon": 129.1513233
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "그린레일 산책로"
+  }
+},
+{
+  "type": "way",
+  "id": 895269261,
+  "center": {
+    "lat": 35.1171674,
+    "lon": 129.0351679
+  },
+  "tags": {
+    "handrail": "yes",
+    "highway": "steps",
+    "incline": "up",
+    "lit": "yes",
+    "name": "168계단",
+    "name:en": "168 Steps",
+    "name:ja": "168階段",
+    "name:ko": "168계단",
+    "step_count": "168",
+    "surface": "concrete",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "way",
+  "id": 953378697,
+  "center": {
+    "lat": 35.1592157,
+    "lon": 129.1295058
+  },
+  "tags": {
+    "bicycle": "designated",
+    "footway": "sidewalk",
+    "highway": "footway",
+    "name": "갈맷길",
+    "segregated": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 963170528,
+  "center": {
+    "lat": 35.0675313,
+    "lon": 129.0656869
+  },
+  "tags": {
+    "bicycle": "no",
+    "foot": "yes",
+    "highway": "service",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 963170529,
+  "center": {
+    "lat": 35.0684039,
+    "lon": 129.0655005
+  },
+  "tags": {
+    "bicycle": "no",
+    "foot": "yes",
+    "highway": "residential",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 963170530,
+  "center": {
+    "lat": 35.0720901,
+    "lon": 129.0568229
+  },
+  "tags": {
+    "bicycle": "no",
+    "foot": "yes",
+    "highway": "footway",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 1005811762,
+  "center": {
+    "lat": 35.1613245,
+    "lon": 129.1703112
+  },
+  "tags": {
+    "highway": "tertiary",
+    "lane_markings": "yes",
+    "name": "달맞이길",
+    "name:en": "Dalmaji-gil",
+    "name:ko": "달맞이길",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1035750328,
+  "center": {
+    "lat": 35.1601514,
+    "lon": 129.1735359
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "해운대구",
+    "addr:subdistrict": "중동",
+    "landuse": "residential",
+    "name": "달맞이경동메르빌",
+    "residential": "apartments"
+  }
+},
+{
+  "type": "way",
+  "id": 1059990973,
+  "center": {
+    "lat": 35.2577158,
+    "lon": 129.2383529
+  },
+  "tags": {
+    "bicycle": "no",
+    "bridge": "yes",
+    "highway": "path",
+    "horse": "no",
+    "layer": "1",
+    "name": "학리해안산책로"
+  }
+},
+{
+  "type": "way",
+  "id": 1059990974,
+  "center": {
+    "lat": 35.2573842,
+    "lon": 129.2383843
+  },
+  "tags": {
+    "bicycle": "no",
+    "highway": "steps",
+    "horse": "no",
+    "name": "학리해안산책로"
+  }
+},
+{
+  "type": "way",
+  "id": 1059990975,
+  "center": {
+    "lat": 35.2575020,
+    "lon": 129.2384564
+  },
+  "tags": {
+    "bicycle": "no",
+    "bridge": "yes",
+    "highway": "path",
+    "horse": "no",
+    "layer": "1",
+    "name": "학리해안산책로"
+  }
+},
+{
+  "type": "way",
+  "id": 1059990976,
+  "center": {
+    "lat": 35.2574816,
+    "lon": 129.2385745
+  },
+  "tags": {
+    "highway": "steps",
+    "name": "학리해안산책로"
+  }
+},
+{
+  "type": "way",
+  "id": 1059991278,
+  "center": {
+    "lat": 35.2575569,
+    "lon": 129.2383651
+  },
+  "tags": {
+    "highway": "steps",
+    "name": "학리해안산책로"
+  }
+},
+{
+  "type": "way",
+  "id": 1060005355,
+  "center": {
+    "lat": 35.1641861,
+    "lon": 129.1960753
+  },
+  "tags": {
+    "highway": "footway",
+    "name": "청사포다릿돌전망대"
+  }
+},
+{
+  "type": "way",
+  "id": 1060005359,
+  "center": {
+    "lat": 35.1577489,
+    "lon": 129.1727644
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "service",
+    "name": "달맞이길104번길",
+    "name:en": "Dalmaji-gil 104beon-gil",
+    "name:ko": "달맞이길104번길"
+  }
+},
+{
+  "type": "way",
+  "id": 1063499878,
+  "center": {
+    "lat": 35.1638876,
+    "lon": 129.1964120
+  },
+  "tags": {
+    "area": "yes",
+    "bridge": "yes",
+    "highway": "pedestrian",
+    "layer": "1",
+    "material": "glass",
+    "name": "청사포다릿돌전망대",
+    "note": "믿을 만한 위성지도와 함께 gps 좌표를 참고하여 그린 구조물이므로 일부 위성지도와 크기가 맞지 않다고 해서 고치지 마실 것!",
+    "source": "gps;aerial imagery"
+  }
+},
+{
+  "type": "way",
+  "id": 1066954533,
+  "center": {
+    "lat": 35.1948399,
+    "lon": 129.2245013
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "residential",
+    "name": "갈맷길",
+    "name:ja": "カルメッキル"
+  }
+},
+{
+  "type": "way",
+  "id": 1082192225,
+  "center": {
+    "lat": 35.0160116,
+    "lon": 128.8349037
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "residential",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 1125637773,
+  "center": {
+    "lat": 35.2932035,
+    "lon": 129.2604649
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "residential",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 1125637774,
+  "center": {
+    "lat": 35.2897334,
+    "lon": 129.2586127
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 1125637777,
+  "center": {
+    "lat": 35.2851047,
+    "lon": 129.2586104
+  },
+  "tags": {
+    "cycleway:both": "shared_lane",
+    "cycleway:both:lane": "pictogram",
+    "foot": "yes",
+    "highway": "tertiary",
+    "lanes": "2",
+    "name": "갈맷길",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1143185853,
+  "center": {
+    "lat": 35.0754432,
+    "lon": 129.0478955
+  },
+  "tags": {
+    "highway": "footway",
+    "layer": "-1",
+    "name": "흰여울해안터널",
+    "name:en": "Huin-yeoul Costal Tunnel",
+    "tunnel": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1143185855,
+  "center": {
+    "lat": 35.0785868,
+    "lon": 129.0442339
+  },
+  "tags": {
+    "bicycle": "no",
+    "foot": "yes",
+    "highway": "footway",
+    "motor_vehicle": "no",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 1143806066,
+  "center": {
+    "lat": 35.0756131,
+    "lon": 129.0476704
+  },
+  "tags": {
+    "bicycle": "no",
+    "foot": "yes",
+    "handrail:right": "yes",
+    "highway": "steps",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 1164625812,
+  "center": {
+    "lat": 35.0173477,
+    "lon": 128.8364585
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "path",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 1186698168,
+  "center": {
+    "lat": 35.0509741,
+    "lon": 128.9685475
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "사하구",
+    "landuse": "residential",
+    "name": "도시몰운대아파트",
+    "name:ko": "도시몰운대아파트",
+    "residential": "apartments"
+  }
+},
+{
+  "type": "way",
+  "id": 1186698169,
+  "center": {
+    "lat": 35.0523026,
+    "lon": 128.9678071
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "사하구",
+    "landuse": "residential",
+    "name": "도시몰운대아파트",
+    "name:ko": "도시몰운대아파트",
+    "residential": "apartments"
+  }
+},
+{
+  "type": "way",
+  "id": 1186698170,
+  "center": {
+    "lat": 35.0520720,
+    "lon": 128.9662447
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "사하구",
+    "landuse": "residential",
+    "name": "도시몰운대아파트",
+    "name:ko": "도시몰운대아파트",
+    "residential": "apartments"
+  }
+},
+{
+  "type": "way",
+  "id": 1186698174,
+  "center": {
+    "lat": 35.0505493,
+    "lon": 128.9635116
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "사하구",
+    "landuse": "residential",
+    "name": "도시몰운대아파트",
+    "name:ko": "도시몰운대아파트",
+    "residential": "apartments"
+  }
+},
+{
+  "type": "way",
+  "id": 1186698175,
+  "center": {
+    "lat": 35.0521064,
+    "lon": 128.9623612
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "사하구",
+    "landuse": "residential",
+    "name": "도시몰운대아파트",
+    "name:ko": "도시몰운대아파트",
+    "residential": "apartments"
+  }
+},
+{
+  "type": "way",
+  "id": 1219991300,
+  "center": {
+    "lat": 35.1639981,
+    "lon": 129.1857103
+  },
+  "tags": {
+    "bridge:structure": "beam",
+    "highway": "tertiary",
+    "name": "달맞이길",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1219991301,
+  "center": {
+    "lat": 35.1645840,
+    "lon": 129.1863705
+  },
+  "tags": {
+    "bridge:structure": "beam",
+    "highway": "tertiary",
+    "lanes": "2",
+    "name": "달맞이길",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1220158581,
+  "center": {
+    "lat": 35.2462038,
+    "lon": 129.1167456
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "path",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 1220175125,
+  "center": {
+    "lat": 35.2583936,
+    "lon": 129.1075153
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "path",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 1220175126,
+  "center": {
+    "lat": 35.2573549,
+    "lon": 129.1069146
+  },
+  "tags": {
+    "bridge": "boardwalk",
+    "foot": "yes",
+    "highway": "path",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 1220175131,
+  "center": {
+    "lat": 35.2491701,
+    "lon": 129.1121118
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "path",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 1227024586,
+  "center": {
+    "lat": 35.0920727,
+    "lon": 129.0396312
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ko": "절영로",
+    "oneway": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1227024587,
+  "center": {
+    "lat": 35.0918486,
+    "lon": 129.0395141
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ko": "절영로",
+    "oneway": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 1227024590,
+  "center": {
+    "lat": 35.0925359,
+    "lon": 129.0398654
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ko": "절영로",
+    "oneway": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 1227024591,
+  "center": {
+    "lat": 35.0934445,
+    "lon": 129.0403482
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ko": "절영로",
+    "oneway": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 1227706875,
+  "center": {
+    "lat": 35.2457567,
+    "lon": 129.0568596
+  },
+  "tags": {
+    "name": "금정산성광장",
+    "place": "square"
+  }
+},
+{
+  "type": "way",
+  "id": 1266985944,
+  "center": {
+    "lat": 35.1078294,
+    "lon": 129.1087222
+  },
+  "tags": {
+    "highway": "path",
+    "name": "이기대둘랫길"
+  }
+},
+{
+  "type": "way",
+  "id": 1266995681,
+  "center": {
+    "lat": 35.1201575,
+    "lon": 129.1040502
+  },
+  "tags": {
+    "highway": "path",
+    "name": "이기대둘랫길"
+  }
+},
+{
+  "type": "way",
+  "id": 1275958473,
+  "center": {
+    "lat": 35.1576231,
+    "lon": 129.1745079
+  },
+  "tags": {
+    "highway": "footway",
+    "name": "달맞이길104번길",
+    "name:en": "Dalmaji-gil 104beon-gil",
+    "name:ko": "달맞이길104번길",
+    "surface": "concrete",
+    "width": "1.3"
+  }
+},
+{
+  "type": "way",
+  "id": 1275958475,
+  "center": {
+    "lat": 35.1579676,
+    "lon": 129.1734940
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "path",
+    "name": "달맞이길104번길",
+    "name:en": "Dalmaji-gil 104beon-gil",
+    "name:ko": "달맞이길104번길"
+  }
+},
+{
+  "type": "way",
+  "id": 1297446566,
+  "center": {
+    "lat": 35.1244016,
+    "lon": 129.1152861
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "남구",
+    "addr:subdistrict": "용호동",
+    "landuse": "residential",
+    "name": "더파크 이기대아파트",
+    "name:ko": "더파크 이기대아파트",
+    "residential": "apartments"
+  }
+},
+{
+  "type": "way",
+  "id": 1302475446,
+  "center": {
+    "lat": 35.1641557,
+    "lon": 129.1961482
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "해운대구",
+    "addr:subdistrict": "중동",
+    "building": "yes",
+    "information": "office",
+    "name": "청사포다릿돌전망대 안내소"
+  }
+},
+{
+  "type": "way",
+  "id": 1302530366,
+  "center": {
+    "lat": 35.1641314,
+    "lon": 129.1959911
+  },
+  "tags": {
+    "building": "roof",
+    "name": "해운대블루라인파크 다릿돌전망대 간이역"
+  }
+},
+{
+  "type": "way",
+  "id": 1302530368,
+  "center": {
+    "lat": 35.1552541,
+    "lon": 129.1793939
+  },
+  "tags": {
+    "electrified": "rail",
+    "gauge": "1435",
+    "name": "해운대 블루라인",
+    "name:en": "Haeundae Blue-line",
+    "name:ja": "海雲台ブルーライン",
+    "name:ko": "해운대블루라인 해변열차",
+    "name:zh": "海雲臺藍線",
+    "operator": "해운대블루라인(주)",
+    "railway": "tram",
+    "usage": "tourism",
+    "voltage": "48",
+    "website": "https://www.bluelinepark.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 1302530370,
+  "center": {
+    "lat": 35.1581707,
+    "lon": 129.1728278
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "해운대구",
+    "addr:subdistrict": "중동",
+    "building": "yes",
+    "building:levels": "2",
+    "layer": "1",
+    "name": "해운대블루라인파크 미포정거장"
+  }
+},
+{
+  "type": "way",
+  "id": 1302530371,
+  "center": {
+    "lat": 35.1612403,
+    "lon": 129.1913814
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "해운대구",
+    "addr:subdistrict": "중동",
+    "building": "yes",
+    "layer": "1",
+    "name": "해운대블루라인파크 청사포정거장"
+  }
+},
+{
+  "type": "way",
+  "id": 1302627163,
+  "center": {
+    "lat": 35.1592081,
+    "lon": 129.1716800
+  },
+  "tags": {
+    "area": "yes",
+    "highway": "pedestrian",
+    "name": "미포블루라인광장",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 1302627164,
+  "center": {
+    "lat": 35.1690071,
+    "lon": 129.1965989
+  },
+  "tags": {
+    "building": "roof",
+    "layer": "1",
+    "name": "해운대블루라인파크 구덕포 간이역"
+  }
+},
+{
+  "type": "way",
+  "id": 1302627165,
+  "center": {
+    "lat": 35.1794291,
+    "lon": 129.1989130
+  },
+  "tags": {
+    "electrified": "rail",
+    "gauge": "1435",
+    "maxspeed": "4",
+    "name": "해운대 블루라인",
+    "name:en": "Haeundae Blue-line",
+    "name:ja": "海雲台ブルーライン",
+    "name:ko": "해운대블루라인 해변열차",
+    "name:zh": "海雲臺藍線",
+    "operator": "해운대블루라인(주)",
+    "railway": "tram",
+    "service": "yard",
+    "usage": "tourism",
+    "voltage": "48",
+    "website": "https://www.bluelinepark.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 1310803447,
+  "center": {
+    "lat": 35.2831002,
+    "lon": 129.2574871
+  },
+  "tags": {
+    "cycleway:both": "shared_lane",
+    "cycleway:both:lane": "pictogram",
+    "foot": "yes",
+    "highway": "tertiary",
+    "lane_markings": "no",
+    "name": "갈맷길",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1349542862,
+  "center": {
+    "lat": 35.0566168,
+    "lon": 128.9653568
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "사하구",
+    "addr:housenumber": "100",
+    "addr:postcode": "49497",
+    "addr:street": "다대낙조2길",
+    "addr:subdistrict": "다대동",
+    "landuse": "residential",
+    "name": "다대롯데캐슬몰운대1단지",
+    "name:ko": "다대롯데캐슬몰운대1단지",
+    "residential": "apartments"
+  }
+},
+{
+  "type": "way",
+  "id": 1349542863,
+  "center": {
+    "lat": 35.0572686,
+    "lon": 128.9638208
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "사하구",
+    "addr:housenumber": "100",
+    "addr:postcode": "49497",
+    "addr:street": "다대낙조2길",
+    "addr:subdistrict": "다대동",
+    "landuse": "residential",
+    "name": "다대롯데캐슬몰운대2단지",
+    "name:ko": "다대롯데캐슬몰운대2단지",
+    "residential": "apartments"
+  }
+},
+{
+  "type": "way",
+  "id": 1349542864,
+  "center": {
+    "lat": 35.0554739,
+    "lon": 128.9620972
+  },
+  "tags": {
+    "addr:city": "부산광역시",
+    "addr:district": "사하구",
+    "addr:housenumber": "100",
+    "addr:postcode": "49497",
+    "addr:street": "다대낙조2길",
+    "addr:subdistrict": "다대동",
+    "landuse": "residential",
+    "name": "다대롯데캐슬몰운대3단지",
+    "name:ko": "다대롯데캐슬몰운대3단지",
+    "residential": "apartments"
+  }
+},
+{
+  "type": "way",
+  "id": 1350821443,
+  "center": {
+    "lat": 35.1303949,
+    "lon": 129.1209215
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "path",
+    "layer": "1",
+    "name": "이기대출렁다리",
+    "name:en": "Igidae Suspension Bridge",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 1365677499,
+  "center": {
+    "lat": 35.0654307,
+    "lon": 129.0679840
+  },
+  "tags": {
+    "bicycle": "no",
+    "foot": "yes",
+    "highway": "footway",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 1366180447,
+  "center": {
+    "lat": 35.1244402,
+    "lon": 129.1147352
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "이기대공원로",
+    "name:en": "Igidaegongwon-ro",
+    "name:ja": "二妓台公園路",
+    "name:ko": "이기대공원로",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1366180448,
+  "center": {
+    "lat": 35.1244718,
+    "lon": 129.1147022
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "이기대공원로",
+    "name:en": "Igidaegongwon-ro",
+    "name:ja": "二妓台公園路",
+    "name:ko": "이기대공원로",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1366180449,
+  "center": {
+    "lat": 35.1243719,
+    "lon": 129.1145988
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "이기대공원로",
+    "name:en": "Igidaegongwon-ro",
+    "name:ja": "二妓台公園路",
+    "name:ko": "이기대공원로",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1366180450,
+  "center": {
+    "lat": 35.1243133,
+    "lon": 129.1144018
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "이기대공원로",
+    "name:en": "Igidaegongwon-ro",
+    "name:ja": "二妓台公園路",
+    "name:ko": "이기대공원로",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1366180451,
+  "center": {
+    "lat": 35.1243569,
+    "lon": 129.1143808
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "이기대공원로",
+    "name:en": "Igidaegongwon-ro",
+    "name:ja": "二妓台公園路",
+    "name:ko": "이기대공원로",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1366180452,
+  "center": {
+    "lat": 35.1245404,
+    "lon": 129.1135097
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "이기대공원로",
+    "name:en": "Igidaegongwon-ro",
+    "name:ja": "二妓台公園路",
+    "name:ko": "이기대공원로"
+  }
+},
+{
+  "type": "way",
+  "id": 1366195449,
+  "center": {
+    "lat": 35.1249035,
+    "lon": 129.1126927
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "이기대공원로",
+    "name:en": "Igidaegongwon-ro",
+    "name:ja": "二妓台公園路",
+    "name:ko": "이기대공원로",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1366195450,
+  "center": {
+    "lat": 35.1248450,
+    "lon": 129.1126740
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "이기대공원로",
+    "name:en": "Igidaegongwon-ro",
+    "name:ja": "二妓台公園路",
+    "name:ko": "이기대공원로",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1386052842,
+  "center": {
+    "lat": 35.0498380,
+    "lon": 128.8307331
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "residential",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 1386052843,
+  "center": {
+    "lat": 35.0503356,
+    "lon": 128.8306085
+  },
+  "tags": {
+    "bridge": "yes",
+    "foot": "yes",
+    "highway": "residential",
+    "layer": "1",
+    "name": "갈맷길"
+  }
+},
+{
+  "type": "way",
+  "id": 1442940086,
+  "center": {
+    "lat": 35.1702182,
+    "lon": 129.1967995
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "name": "해운대 블루라인",
+    "operator": "해운대 블루라인파크",
+    "railway": "rail",
+    "service": "siding"
+  }
+},
+{
+  "type": "way",
+  "id": 1442940389,
+  "center": {
+    "lat": 35.1805451,
+    "lon": 129.1998406
+  },
+  "tags": {
+    "name": "해운대블루라인 해변열차",
+    "operator": "한국철도공사",
+    "railway": "tram",
+    "service": "siding",
+    "usage": "tourism"
+  }
+},
+{
+  "type": "way",
+  "id": 1452546780,
+  "center": {
+    "lat": 35.0466799,
+    "lon": 128.9690922
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "몰운대2길",
+    "name:en": "Morundae 2-gil",
+    "name:ko": "몰운대2길",
+    "oneway": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1453071707,
+  "center": {
+    "lat": 35.0465420,
+    "lon": 128.9683837
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "몰운대1길",
+    "name:en": "Morundae 1-gil",
+    "name:ja": "沒雲台キル",
+    "name:ko": "몰운대1길",
+    "name:ko-Latn": "Morundae 1-gil",
+    "noref": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1457464649,
+  "center": {
+    "lat": 35.1613624,
+    "lon": 129.1701407
+  },
+  "tags": {
+    "highway": "tertiary",
+    "lane_markings": "yes",
+    "name": "달맞이길",
+    "name:en": "Dalmaji-gil",
+    "name:ko": "달맞이길",
+    "oneway": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1516075316,
+  "center": {
+    "lat": 35.0459557,
+    "lon": 128.9687981
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "몰운대2길",
+    "name:en": "Morundae 2-gil",
+    "name:ko": "몰운대2길",
+    "oneway": "-1",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1543151870,
+  "center": {
+    "lat": 35.0796530,
+    "lon": 129.0443528
+  },
+  "tags": {
+    "highway": "secondary",
+    "lanes": "1",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ko": "절영로",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1543151872,
+  "center": {
+    "lat": 35.0799455,
+    "lon": 129.0438977
+  },
+  "tags": {
+    "highway": "secondary",
+    "lanes": "1",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ko": "절영로",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1543151873,
+  "center": {
+    "lat": 35.0798739,
+    "lon": 129.0439017
+  },
+  "tags": {
+    "highway": "secondary",
+    "lanes": "1",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ko": "절영로",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1543151874,
+  "center": {
+    "lat": 35.0814200,
+    "lon": 129.0424928
+  },
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "name": "절영로",
+    "name:en": "Jeoryeong-ro",
+    "name:ko": "절영로",
+    "oneway": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1561283517,
+  "center": {
+    "lat": 35.2578251,
+    "lon": 129.2405730
+  },
+  "tags": {
+    "bicycle": "no",
+    "highway": "path",
+    "horse": "no",
+    "informal": "yes",
+    "layer": "1",
+    "name": "학리해안산책로"
+  }
+},
+{
+  "type": "relation",
+  "id": 6994877,
+  "center": {
+    "lat": 35.0389414,
+    "lon": 128.9712019
+  },
+  "tags": {
+    "name": "몰운대",
+    "name:ja": "没雲台",
+    "natural": "wood",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 8255488,
+  "center": {
+    "lat": 35.0481919,
+    "lon": 128.9657558
+  },
+  "tags": {
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "다대포해수욕장 (몰운대)",
+    "name:en": "Dadaepo Beach",
+    "name:ko": "다대포해수욕장역",
+    "name:ko-Hani": "多大浦海水浴場驛",
+    "name:ko-Latn": "Dadaepo haesuyokjangyeok",
+    "operator": "부산교통공사",
+    "phone": "+82 51-678-6195",
+    "public_transport": "stop_area",
+    "subway": "yes",
+    "type": "public_transport",
+    "wheelchair": "yes",
+    "wikipedia": "ko:다대포해수욕장역"
+  }
+},
+{
+  "type": "relation",
+  "id": 9159031,
+  "center": {
+    "lat": 35.1175329,
+    "lon": 129.1203678
+  },
+  "tags": {
+    "name": "이기대 도시자연공원",
+    "name:ja": "二妓台都市自然公園",
+    "natural": "wood",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 22122646,
+  "center": {
+    "lat": 35.1671208,
+    "lon": 129.1848317
+  },
+  "tags": {
+    "name": "송정해안산책로",
+    "network": "lwn",
+    "route": "foot",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 22122647,
+  "center": {
+    "lat": 35.1702528,
+    "lon": 129.1954789
+  },
+  "tags": {
+    "name": "송정해안산책로",
+    "network": "lwn",
+    "route": "foot",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 22123162,
+  "center": {
+    "lat": 35.1169986,
+    "lon": 129.1242234
+  },
+  "tags": {
+    "name": "이기대해안산책로",
+    "network": "lwn",
+    "route": "foot",
+    "type": "route"
+  }
+}
+
+  ]
+}
