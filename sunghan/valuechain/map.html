@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>밸류체인 지도 · 남포 걸음 (간단판)</title>
+<style>
+  body { font-family: "Malgun Gothic", system-ui, sans-serif; max-width: 1000px; margin: 32px auto; padding: 0 20px; color: #222; line-height: 1.6; }
+  h1 { font-size: 1.4rem; margin-bottom: 4px; }
+  .sub { color: #555; margin-top: 0; }
+  h2 { font-size: 1.05rem; margin-top: 28px; }
+  #diagram { padding: 12px; border: 1px solid #ddd; border-radius: 8px; overflow-x: auto; }
+  #diagram svg { display: block; margin: 0 auto; height: auto; }
+  .legend { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+  .legend li { display: flex; align-items: center; gap: 12px; }
+  .line { width: 56px; height: 0; border-top: 3px solid; flex: none; }
+  .data { border-color: #2563eb; } .goods { border-color: #6b7280; } .money { border-color: #16a34a; }
+  .dash { border-top-style: dashed; border-color: #444; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f5f5f5; }
+  .summary { font-weight: bold; margin-top: 16px; }
+  details { margin-top: 24px; } pre { background: #f5f5f5; padding: 14px 16px; border-radius: 8px; overflow-x: auto; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<h1>밸류체인 지도 — 남포 걸음 (간단판)</h1>
+<p class="sub">2026-11-24 · sunghan · 근거(파일 · 줄 번호)와 단계별 상자가 있는 원래 그림은 <code>map-detail.html</code>에 있습니다.</p>
+
+<div id="diagram">그림을 불러오는 중… (인터넷이 연결되어 있어야 합니다)</div>
+
+<h2>보는 법</h2>
+<ul class="legend">
+  <li><span class="line data"></span> 파랑 = 데이터</li>
+  <li><span class="line goods"></span> 회색 = 물건 (영상 포함)</li>
+  <li><span class="line money"></span> 초록 = 돈</li>
+  <li><span class="line dash"></span> 점선 = 아직 미정 (실선 = 확정)</li>
+</ul>
+
+<h2>화살표</h2>
+<table>
+  <tr><th>번호</th><th>무엇이</th><th>어디서 → 어디로</th><th>상태</th></tr>
+  <tr><td>①</td><td>시장 데이터</td><td>소상공인시장진흥공단 → 우리 팀</td><td>확정</td></tr>
+  <tr><td>②</td><td>축제 데이터</td><td>한국관광공사 · 지자체 → 우리 팀</td><td>확정</td></tr>
+  <tr><td>③</td><td>걸어 본 기록</td><td>팀 안 (2단계 → 5단계, 그림에서 뺌)</td><td>아직 안 걸음</td></tr>
+  <tr><td>④</td><td>안내 한 장</td><td>우리 팀 → 최민재</td><td>확정</td></tr>
+  <tr><td>⑤</td><td>"미리 알았다" 응답</td><td>최민재 → 우리 팀</td><td>확정</td></tr>
+  <tr><td>⑥</td><td>점심 · 물건</td><td>시장 가게 → 최민재</td><td>확정</td></tr>
+  <tr><td>⑦</td><td>시장에서 쓰는 돈</td><td>최민재 → 시장 가게</td><td>확정</td></tr>
+  <tr><td>⑧⑨</td><td>세로 영상</td><td>우리 팀 → 채널 → 최민재</td><td>채널 미정</td></tr>
+  <tr><td>⑩</td><td>맡긴 영상</td><td>우리 팀 → 영상 맡기는 쪽</td><td>제안</td></tr>
+  <tr><td>⑪</td><td>영상 제작 값</td><td>영상 맡기는 쪽 → 우리 팀</td><td>제안</td></tr>
+  <tr><td>⑫</td><td>손님 데려다주는 값</td><td>시장 가게 → 우리 팀</td><td>제안</td></tr>
+</table>
+<p class="summary">한 줄 요약: 우리 팀으로 들어오는 돈(⑪ ⑫)은 아직 전부 점선입니다.</p>
+
+<details>
+<summary>이 그림을 만든 Mermaid 글 (<code>map.md</code> 맨 위와 같음)</summary>
+<pre id="source">
+flowchart LR
+  GOV["공공데이터&lt;br/&gt;(시장 · 축제)"]
+  TEAM["우리 팀&lt;br/&gt;남포 걸음"]
+  MJ["손님&lt;br/&gt;최민재"]
+  SHOP["시장 가게"]
+  CH["채널&lt;br/&gt;(미정)"]
+  BUYER["영상 맡기는 쪽&lt;br/&gt;(제안)"]
+
+  GOV --&gt;|"①② 데이터"| TEAM
+  TEAM --&gt;|"④ 안내 한 장"| MJ
+  MJ --&gt;|"⑤ 응답"| TEAM
+  MJ --&gt;|"⑦ 돈"| SHOP
+  SHOP --&gt;|"⑥ 점심 · 물건"| MJ
+  TEAM -.-&gt;|"⑧ 영상"| CH
+  CH -.-&gt;|"⑨ 영상"| MJ
+  TEAM -.-&gt;|"⑩ 영상"| BUYER
+  BUYER -.-&gt;|"⑪ 돈"| TEAM
+  SHOP -.-&gt;|"⑫ 돈"| TEAM
+
+  linkStyle 0,1,2 stroke:#2563eb,stroke-width:2px
+  linkStyle 4,5,6,7 stroke:#6b7280,stroke-width:2px
+  linkStyle 3,8,9 stroke:#16a34a,stroke-width:2px
+</pre>
+</details>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+<script>
+  // 아래 <pre>의 글을 그대로 읽어 그린다. 그래서 글과 그림이 항상 같다.
+  mermaid.initialize({ startOnLoad: false, flowchart: { htmlLabels: true } });
+  const text = document.getElementById("source").textContent.trim();
+  mermaid.render("valuechain-svg", text).then(({ svg }) => {
+    document.getElementById("diagram").innerHTML = svg;
+  }).catch((e) => {
+    document.getElementById("diagram").textContent = "그림을 그리지 못했습니다: " + e.message;
+  });
+</script>
+</body>
+</html>
