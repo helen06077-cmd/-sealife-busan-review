@@ -2099,6 +2099,17 @@ ol.line li.start-me .dot{background:#336fc4;border-color:#336fc4}
 .nv-run{position:absolute;top:50%;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:#fff;border:2.5px solid var(--dd,#336fc4);overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(16,39,61,.3)}
 .nv-run img{width:86%;height:86%;object-fit:contain}
 .nv-run.k-bus{border-color:var(--m-bus)}.nv-run.k-subway{border-color:var(--m-sub)}
+/* v23 진행 막대 드래그: 막대를 끌면 그 지점에서 남은 길·시간을 말풍선으로, 지도엔 그 위치 핀. 미리보기면 놓은 곳부터 이어 달린다 */
+.nv-prog{cursor:grab;touch-action:none}
+.nv-prog::before{content:"";position:absolute;left:-8px;right:-8px;top:-16px;bottom:-16px}
+.nv-prog:focus-visible{outline:3px solid var(--sea-deep,#1f4f94);outline-offset:6px}
+.nv-prog.dragging{cursor:grabbing}
+.nv-pin{position:absolute;top:50%;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:#fff;border:3px solid #263552;box-shadow:0 2px 6px rgba(16,39,61,.35);pointer-events:none}
+.nv-peek{position:absolute;bottom:calc(100% + 16px);transform:translateX(-50%);background:#263552;color:#fff;border-radius:12px;padding:7px 11px;font-size:12.5px;line-height:1.35;white-space:nowrap;box-shadow:0 6px 16px rgba(16,39,61,.3);pointer-events:none;z-index:2}
+.nv-peek b{display:block;font-size:14.5px}
+.nv-peek small{display:block;opacity:.85;max-width:240px;overflow:hidden;text-overflow:ellipsis}
+.nv-peek[hidden],.nv-pin[hidden]{display:none}
+.nv-ghost{display:block;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:#fff;border:4px solid #263552;box-shadow:0 0 0 6px rgba(38,53,82,.22)}
 .nv-ctl{grid-area:ctl;display:flex;gap:6px;flex-wrap:wrap}
 .nv-ctl button{font:inherit;font-size:13px;font-weight:700;border:1px solid var(--line);background:var(--surface2);color:var(--ink);border-radius:99px;padding:5px 11px;cursor:pointer;min-height:34px}
 .nv-ctl button[aria-pressed="true"]{background:#e4effb;border-color:#336fc4;color:#1f4f94}
@@ -5468,14 +5479,60 @@ document.querySelectorAll('img[data-char]').forEach(img=>{ img.src=CHAR[img.data
     hud=document.createElement('div'); hud.className='nav-hud'; hud.id='nav-hud'; hud.hidden=true;
     hud.innerHTML=`<div class="nv-top" role="status" aria-live="polite"><span class="nv-ic" aria-hidden="true"></span><div class="nv-tx"><b class="nv-dist"></b><span class="nv-ins"></span><small class="nv-then"></small></div><span class="nv-src"></span></div>
       <div class="nv-buddy"><span class="nv-face"><img alt=""></span><span class="nv-say"></span></div>
-      <div class="nv-bot"><div class="nv-eta"><b></b><small></small></div><div class="nv-prog" aria-hidden="true"><i></i><span class="nv-run"><img alt=""></span></div>
+      <div class="nv-bot"><div class="nv-eta"><b></b><small></small></div><div class="nv-prog" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100"><i></i><span class="nv-run"><img alt=""></span><span class="nv-pin" hidden></span><span class="nv-peek" hidden></span></div>
         <div class="nv-ctl"><button type="button" data-nv="play"></button><button type="button" data-nv="speed"></button><button type="button" data-nv="voice"></button><button type="button" data-nv="follow"></button><button type="button" data-nv="exit">✕ <span></span></button></div></div>
       <div class="nv-arrive" hidden><div class="nv-confetti" aria-hidden="true">${Array.from({length:18},(_,i)=>`<i style="--i:${i}"></i>`).join('')}</div><img alt=""><b></b><span></span><div class="nv-acts"><button type="button" class="map-btn primary" data-nv="next"></button><button type="button" class="map-btn" data-nv="exit"></button></div></div>`;
     document.querySelector('.map-canvas-wrap').appendChild(hud);
     hud.addEventListener('click',e=>{const b=e.target.closest('[data-nv]'); if(b) navCtl(b.dataset.nv);});
+    progDrag(hud.querySelector('.nv-prog'));
     return hud;
   }
   const q=s=>hud.querySelector(s);
+  /* v23 진행 막대 드래그: 끄는 동안 그 지점에서 '남은 길·남은 시간·그 지점 안내'를 보여 주고 지도에 위치 핀을 찍는다.
+     실시간 안내는 보기만(손을 떼면 원래대로), 미리 달려 보기는 손을 뗀 곳부터 이어서 달린다. 키보드 ←/→로도 움직일 수 있다 */
+  let nvGhost=null;
+  function peekAt(d){
+    if(!NV) return;
+    d=Math.max(0,Math.min(NV.total,d)); NV.peekD=d;
+    const pct=d/NV.total*100, bar=q('.nv-prog'), w=bar.clientWidth||1;
+    const remain=NV.total-d, mins=leftMin(d), seg=segAt(d), m=NV.marks.find(x=>x.at>d+3)||NV.marks[NV.marks.length-1];
+    const behind=d<NV.along-5;
+    const pin=q('.nv-pin'), pk=q('.nv-peek');
+    pin.hidden=false; pin.style.left=pct+'%';
+    pk.hidden=false;
+    pk.innerHTML=`<b>${behind?T(`지나온 곳 · 여기서 남은 길 ${fmtDist(remain)}`,`Passed · ${fmtDist(remain)} left from here`):remain<15?T('도착 지점','Destination'):T(`여기서 남은 길 ${fmtDist(remain)}`,`${fmtDist(remain)} left from here`)}</b>${remain>=15?`<span>${T(`약 ${fmtMin(mins)} · ${T(...KIND_NM[seg.kind])} 구간`,`~${fmtMin(mins)} · ${T(...KIND_NM[seg.kind])}`)}</span><small>${html(T(`다음: ${m.tx}`,`Next: ${m.tx}`))}</small>`:''}`;
+    const pw=pk.offsetWidth||0, x=Math.max(pw/2-12,Math.min(w-pw/2+12,pct/100*w)); pk.style.left=x+'px';
+    bar.setAttribute('aria-valuenow',String(Math.round(pct)));
+    bar.setAttribute('aria-valuetext',T(`남은 길 ${fmtDist(remain)}, 약 ${fmtMin(mins)}`,`${fmtDist(remain)} left, about ${fmtMin(mins)}`));
+    const at=pointAt(NV.nc.path,d).at;
+    if(!nvGhost) nvGhost=Leaf.marker(at,{icon:Leaf.divIcon({className:'nv-ghost-icon',html:'<span class="nv-ghost"></span>',iconSize:[0,0]}),interactive:false,keyboard:false,zIndexOffset:2700}).addTo(nvLayer);
+    else nvGhost.setLatLng(at);
+    /* 위·아래 안내 판에 가리지 않는 곳에 핀이 보이도록 지도를 옮긴다 */
+    if(map){ const box=map.getContainer().getBoundingClientRect(), sz=map.getSize(), c=map.latLngToContainerPoint(at);
+      const t0=(q('.nv-top').getBoundingClientRect().bottom||box.top)-box.top+24, b0=(q('.nv-bot').getBoundingClientRect().top||box.bottom)-box.top-24;
+      const top=Math.max(24,t0), bot=Math.min(sz.y-24,b0>top+40?b0:sz.y-24);
+      if(c.y<top||c.y>bot||c.x<40||c.x>sz.x-40) map.panBy([c.x-sz.x/2,c.y-(top+bot)/2],{animate:false}); }
+  }
+  function peekEnd(seek){
+    if(!NV) return;
+    const d=NV.peekD; NV.peekD=null; NV.peeking=false;
+    q('.nv-pin').hidden=true; q('.nv-peek').hidden=true; q('.nv-prog').classList.remove('dragging');
+    if(nvGhost){ nvGhost.remove(); nvGhost=null; }
+    if(seek&&d!=null&&!NV.live){ NV.along=d; NV.simT=tAtAlong(d); if(NV.arrived&&NV.simT<NV.T){ NV.arrived=false; q('.nv-arrive').hidden=true; } hudButtons(); }
+    NV.camAt=0;
+  }
+  function progDrag(bar){
+    const dAt=e=>{ const r=bar.getBoundingClientRect(); return Math.max(0,Math.min(1,(e.clientX-r.left)/(r.width||1)))*NV.total; };
+    bar.addEventListener('pointerdown',e=>{ if(!NV||e.button>0) return; e.preventDefault(); NV.peeking=true; bar.classList.add('dragging'); try{ bar.setPointerCapture(e.pointerId); }catch(_){} bar.focus({preventScroll:true}); peekAt(dAt(e)); });
+    bar.addEventListener('pointermove',e=>{ if(NV&&NV.peeking) peekAt(dAt(e)); });
+    bar.addEventListener('pointerup',e=>{ if(NV&&NV.peeking) peekEnd(true); });
+    bar.addEventListener('pointercancel',()=>{ if(NV&&NV.peeking) peekEnd(false); });
+    bar.addEventListener('keydown',e=>{ if(!NV) return; const step=NV.total*.05;
+      if(e.key==='ArrowRight'||e.key==='ArrowLeft'){ e.preventDefault(); NV.peeking=true; peekAt((NV.peekD??NV.along)+(e.key==='ArrowRight'?step:-step)); }
+      else if(e.key==='Enter'&&NV.peeking){ e.preventDefault(); peekEnd(true); }
+      else if(e.key==='Escape'&&NV.peeking){ e.preventDefault(); peekEnd(false); } });
+    bar.addEventListener('blur',()=>{ if(NV&&NV.peeking) peekEnd(false); });
+  }
   function hudButtons(){
     if(!NV) return;
     const live=NV.live;
@@ -5525,7 +5582,7 @@ document.querySelectorAll('img[data-char]').forEach(img=>{ img.src=CHAR[img.data
   }
   function stopNav(quiet){
     cancelAnimationFrame(nvRaf); nvRaf=0;
-    if(nvLayer) nvLayer.clearLayers(); nvMarker=null;
+    if(nvLayer) nvLayer.clearLayers(); nvMarker=null; nvGhost=null;
     if(NV) clearTimeout(NV.autoT);
     const had=!!NV; NV=null;
     if(hud) hud.hidden=true;
@@ -5561,10 +5618,10 @@ document.querySelectorAll('img[data-char]').forEach(img=>{ img.src=CHAR[img.data
       const el=nvMarker.getElement(), seg=segAt(NV.along);
       if(el){ const pa=map.latLngToLayerPoint(P.at), pb=map.latLngToLayerPoint(ahead); if(Math.hypot(pb.x-pa.x,pb.y-pa.y)>.5) el.querySelector('.nv-dir')?.style.setProperty('--rot',(Math.atan2(pb.y-pa.y,pb.x-pa.x)*180/Math.PI+90)+'deg');
         if(seg.kind!==NV.kind){ const me=el.querySelector('.nv-me'); if(me){ me.className=`nv-me k-${seg.kind}`; if(seg.pt.line) me.style.setProperty('--lc',seg.pt.line.color); } } }
-      if(seg.kind!==NV.kind){ const first=NV.kind==null; NV.kind=seg.kind; if(!first){ q('.nv-say').textContent=say()[seg.kind]; NV.sayHold=now+2600; speak(say()[seg.kind]); } NV.zoomHold=now+700; if(NV.follow&&!reducedMotion()) map.setView(P.at,Math.min(seg.kind==='walk'?17:15,map.getMaxZoom()||17),{animate:true,duration:.6}); }
+      if(seg.kind!==NV.kind){ const first=NV.kind==null; NV.kind=seg.kind; if(!first){ q('.nv-say').textContent=say()[seg.kind]; NV.sayHold=now+2600; speak(say()[seg.kind]); } NV.zoomHold=now+700; if(NV.follow&&!NV.peeking&&!reducedMotion()) map.setView(P.at,Math.min(seg.kind==='walk'?17:15,map.getMaxZoom()||17),{animate:true,duration:.6}); }
     }
     /* v13: 내비처럼 캐릭터를 가운데보다 조금 뒤에 두고 가는 방향 앞쪽을 더 넓게 보여 준다(앞으로 걷기 60m·버스 300m·지하철 500m 쪽, 화면의 18%까지) */
-    if(NV.follow&&!reducedMotion()&&!(NV.zoomHold>now)&&now-NV.camAt>60){ NV.camAt=now; const s=map.getSize(), c=map.latLngToContainerPoint(P.at), sk=segAt(NV.along).kind;
+    if(NV.follow&&!NV.peeking&&!reducedMotion()&&!(NV.zoomHold>now)&&now-NV.camAt>60){ NV.camAt=now; const s=map.getSize(), c=map.latLngToContainerPoint(P.at), sk=segAt(NV.along).kind;
       const f=map.latLngToContainerPoint(pointAt(path,NV.along+(sk==='subway'?500:sk==='bus'?300:60)).at); let vx=f.x-c.x, vy=f.y-c.y; const vl=Math.hypot(vx,vy), lim=Math.min(s.x,s.y)*.18;
       if(vl>lim){ vx*=lim/vl; vy*=lim/vl; } const want=Leaf.point(c.x+vx,c.y+vy); if(Math.hypot(want.x-s.x/2,want.y-s.y/2)>2) map.panTo(map.containerPointToLatLng(want),{animate:false}); }
     if(travelLine) travelLine.setLatLngs(path.pts.slice(0,P.idx).concat([P.at]));
