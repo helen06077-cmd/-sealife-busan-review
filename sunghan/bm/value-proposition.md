@@ -3,7 +3,7 @@
 > **읽은 파일:** 손님 불편 Top 3 = `sunghan/journey/pain-top3.md` 4절(팀이 고른 셋, 2026-11-25) · 우리 쪽 = `sunghan/bm/canvas-draft.md` · 바라는 것의 리뷰 원문 = `inputs/team_reviews.csv`(씨라이프 부산아쿠아리움 카카오맵 후기 98건)
 > **바꿔 읽은 것:**
 > - 부탁문의 **JTBD 파일 `ax/jtbd.md`는 이 폴더에도, 원격 `origin/main`에도 없습니다.** 가장 가까운 팀 문장인 `jaehee/scenario.md:41` '오늘 하고 싶은 일(목표)' 세 칸을 글자 그대로 옮겼습니다. JTBD로 정해진 문장은 아닙니다 → [확인 필요: 팀 JTBD 문장]
-> - 부탁문의 **`bm/canvas.html`도 없습니다.** canvas-draft.md가 근거로 든 어데GO 기능 테스트 `sunghan/busan-routes_tools/test-features.js`의 항목 이름(화면에 있는 기능)을 대신 읽었습니다. 화면 원본 `busan-routes_초안_v27.html`은 저장소에 없습니다(canvas-draft.md 머리말).
+> - 이 파일을 쓸 때는 **`bm/canvas.html`이 없었습니다.** 그래서 canvas-draft.md가 근거로 든 어데GO 기능 테스트 `sunghan/busan-routes_tools/test-features.js`의 항목 이름(화면에 있는 기능)을 대신 읽었습니다. `bm/canvas.html`은 2026-11-27에 canvas-draft.md의 9줄을 그대로 옮겨 만들었고 화면 기능은 담지 않았습니다(다시 읽어 확인함: 9칸 글과 근거가 canvas-draft.md와 같고, 새로 더해진 칸이 없음). 그래서 아래 '우리 쪽' 근거는 그대로 test-features.js입니다. 화면 원본 `busan-routes_초안_v27.html`은 저장소에 없습니다(canvas-draft.md 머리말).
 
 [1. 나의 기획 목적] 손님 불편과 우리 해결이 짝으로 맞물리는지, 짝이 없는 불편이 어디인지 본다
 [2. 최우선 판단 기준] 손님 쪽은 팀 파일의 말을 그대로 옮기고, 우리 쪽이 손님 쪽을 따라가게 한다
@@ -48,7 +48,7 @@
 
 ---
 
-## 2. 우리 쪽 (네모) — `canvas-draft.md` + `test-features.js`(canvas.html 대신)
+## 2. 우리 쪽 (네모) — `canvas-draft.md` + `test-features.js`(화면 기능 근거)
 
 ### □ 상품과 서비스
 
