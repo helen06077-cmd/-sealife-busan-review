@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BM 캔버스 · 어데GO (GREEN ROUTE BUSAN)</title>
+<style>
+  :root { --line: #d4d4d4; --muted: #555; --check: #b45309; --check-bg: #fff7ed; --ev: #f5f5f5; }
+  * { box-sizing: border-box; }
+  body { font-family: "Malgun Gothic", system-ui, sans-serif; max-width: 1280px; margin: 32px auto; padding: 0 20px; color: #222; line-height: 1.6; }
+  h1 { font-size: 1.4rem; margin-bottom: 4px; }
+  .sub { color: var(--muted); margin-top: 0; }
+  h2 { font-size: 1.05rem; margin-top: 32px; }
+  .notes { border-left: 3px solid var(--line); padding: 4px 14px; color: #333; font-size: 0.92rem; }
+  .notes p { margin: 6px 0; }
+
+  .canvas { display: grid; gap: 0; border: 2px solid #333; margin-top: 20px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-areas:
+      "kp kp ka ka vp vp cr cr cs cs"
+      "kp kp kr kr vp vp ch ch cs cs"
+      "co co co co co rv rv rv rv rv"; }
+  .cell { border: 1px solid var(--line); padding: 12px 14px 14px; background: #fff; min-width: 0; }
+  .cell h3 { margin: 0; font-size: 0.98rem; display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+  .cell h3 .no { color: var(--muted); font-weight: normal; font-size: 0.85rem; }
+  .cell .easy { color: var(--muted); font-size: 0.82rem; margin: 0 0 8px; }
+  .cell .body { margin: 0 0 8px; font-size: 0.92rem; }
+  .kp { grid-area: kp; } .ka { grid-area: ka; } .kr { grid-area: kr; } .vp { grid-area: vp; }
+  .cr { grid-area: cr; } .ch { grid-area: ch; } .cs { grid-area: cs; } .co { grid-area: co; } .rv { grid-area: rv; }
+  .vp { background: #fafafa; }
+
+  .tag { display: inline-block; font-size: 0.78rem; padding: 0 6px; border-radius: 4px; background: var(--check-bg); color: var(--check); border: 1px solid #fed7aa; white-space: nowrap; }
+  .model { display: inline-block; font-size: 0.8rem; padding: 0 8px; border-radius: 4px; background: #222; color: #fff; margin-right: 4px; }
+  details.ev { font-size: 0.82rem; }
+  details.ev summary { cursor: pointer; color: var(--muted); }
+  details.ev ul { margin: 6px 0 0; padding-left: 18px; }
+  details.ev li { margin: 2px 0; }
+  code { background: var(--ev); padding: 0 4px; border-radius: 3px; font-size: 0.85em; word-break: break-all; }
+  .todo { background: var(--check-bg); border: 1px solid #fed7aa; border-radius: 6px; padding: 6px 10px; margin-top: 8px; font-size: 0.85rem; }
+  .todo b { color: var(--check); }
+
+  .count { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+  .count div { border: 1px solid var(--line); border-radius: 8px; padding: 10px 16px; min-width: 170px; }
+  .count strong { display: block; font-size: 1.5rem; }
+  ol li { margin: 4px 0; }
+
+  @media (max-width: 900px) {
+    .canvas { grid-template-columns: 1fr;
+      grid-template-areas: "cs" "vp" "ch" "cr" "rv" "kr" "ka" "kp" "co"; }
+  }
+  @media print { details.ev { display: block; } details.ev[open] summary, details.ev summary { display: none; } body { margin: 0; } }
+</style>
+</head>
+<body>
+<h1>BM 캔버스 — 어데GO (GREEN ROUTE BUSAN)</h1>
+<p class="sub">2026-11-27 · sunghan · 내용은 <code>bm/canvas-draft.md</code>의 9줄을 그대로 옮겼습니다. 줄마다 '근거 보기'를 누르면 파일 이름:줄 번호가 나옵니다. <span class="tag">확인 필요</span>는 아직 팀 파일로 채우지 못한 곳입니다.</p>
+
+<div class="notes">
+  <p><b>먼저 알 것 ①</b> 이 캔버스는 고객을 <b>외국인 · 다른 시·도에서 온 여행자</b>로 놓았습니다. 팀 파일은 손님을 "외국인이 아니라 국내 여행자"(최민재)로 적었습니다(<code>sunghan/brand/persona.md:84</code>, <code>sunghan/brand/one-page.md:40</code>). 팀과 맞춰야 합니다.</p>
+  <p><b>먼저 알 것 ②</b> AX 세 가지(① 추천 경로대로 다니는지 확인 · ② 경로가 지도에 제대로 그려지는지 확인 · ③ 부산 밖 시를 노이즈로 빼기)는 12일차 파일에 그대로 적힌 줄이 없어 부탁문을 기준으로 삼았습니다(<code>canvas-draft.md</code> 머리말).</p>
+  <p><b>먼저 알 것 ③</b> 화면 원본 <code>busan-routes_초안_v27.html</code>은 저장소에 없습니다. 지도 화면 근거는 <code>test-features.js</code>의 항목 이름까지입니다.</p>
+</div>
+
+<div class="canvas">
+
+  <section class="cell kp">
+    <h3><span class="no">8</span> 핵심 파트너</h3>
+    <p class="easy">함께할 곳</p>
+    <p class="body">OpenStreetMap · FOSSGIS OSRM(지도 · 길찾기), 한국관광 데이터랩(수요 자료), 비짓부산패스(외국인 혜택), 수수료를 낼 부산 시장 가게 · 관광지.</p>
+    <div class="todo"><b>확인 필요</b> 맺은 협약은 하나도 없음</div>
+    <details class="ev"><summary>근거 보기</summary><ul>
+      <li>OSM · OSRM: <code>sunghan/research/2026-11-19-data-license.md:32</code></li>
+      <li>데이터랩: <code>jaehee/data/processed/csv/부산_구군별_Top5_0_안내.csv:3</code></li>
+      <li>비짓부산패스(외국인 전용 여부): <code>jaehee/places/tag_criteria.md:44</code></li>
+      <li>시장 가게: <code>sunghan/valuechain/flows.md:67</code></li>
+    </ul></details>
+  </section>
+
+  <section class="cell ka">
+    <h3><span class="no">7</span> 핵심 활동</h3>
+    <p class="easy">꼭 해야 할 일</p>
+    <p class="body">AX ② 경로가 지도에 그려지는지 버튼을 눌러 자동 점검 · AX ③ 부산 밖 시와 노이즈를 추천 후보에서 빼기 · AX ① 추천대로 다녔는지 확인하는 질문 받기.</p>
+    <div class="todo"><b>확인 필요</b> ① 확인 방법은 팀 파일에 없음 · '부산 밖 시를 지도에서 가리는' 코드가 있는지 v27 화면에서 확인</div>
+    <details class="ev"><summary>근거 보기</summary><ul>
+      <li>② 지도 자동 점검: <code>sunghan/busan-routes_tools/test-features.js:204</code>~<code>:206</code></li>
+      <li>일반 · 위성 · 예비 지도 · 영어 화면을 헤드리스 Chrome으로 확인한 기록: <code>sunghan/research/2026-11-19-data-license.md:61</code></li>
+      <li>③ 대상 지역과 제외 기준: <code>jaehee/data/processed/csv/부산_구군별_Top5_0_안내.csv:6</code>, <code>:9</code></li>
+    </ul></details>
+  </section>
+
+  <section class="cell kr">
+    <h3><span class="no">6</span> 핵심 자원</h3>
+    <p class="easy">꼭 있어야 할 것</p>
+    <p class="body">부산 16개 구·군 방문 수요 자료, OSM 지하철 출구 · 정류장 · 버스 노선 · 도로 경로 자료, 어데GO 화면과 기능 테스트 스크립트.</p>
+    <div class="todo"><b>확인 필요</b> 화면 원본 <code>busan-routes_초안_v27.html</code>이 저장소에 없음</div>
+    <details class="ev"><summary>근거 보기</summary><ul>
+      <li>데이터랩 22,080행 · 16개 구·군: <code>jaehee/data/processed/csv/부산_구군별_Top5_0_안내.csv:6</code>, <code>:17</code></li>
+      <li>OSM 자료와 원자료 폴더: <code>sunghan/research/2026-11-19-data-license.md:31</code>~<code>:32</code></li>
+      <li>테스트 스크립트: <code>sunghan/busan-routes_tools/test-features.js:1</code></li>
+    </ul></details>
+  </section>
+
+  <section class="cell vp">
+    <h3><span class="no">2</span> 가치 제안</h3>
+    <p class="easy">무엇을 약속</p>
+    <p class="body">차 없이 부산 안에서만 다니는 경로를, 지도 위에 핀과 선으로 정확히 그려 주고 실제로 그 길을 따라갈 수 있게 합니다. 부산 밖 시는 지도와 추천에서 처음부터 뺍니다.</p>
+    <div class="todo"><b>확인 필요</b> '추천대로 실제 다녔는지'는 아직 잴 길이 없음</div>
+    <details class="ev"><summary>근거 보기</summary><ul>
+      <li>상품 한 줄: <code>jaehee/scenario.md:7</code></li>
+      <li>지도에 핀 · 경로 선 · 길 안내 목록 확인 항목: <code>sunghan/busan-routes_tools/test-features.js:204</code>~<code>:206</code></li>
+      <li>추천 대상은 부산 16개 구·군만: <code>jaehee/data/processed/csv/부산_구군별_Top5_0_안내.csv:6</code></li>
+    </ul></details>
+  </section>
+
+  <section class="cell cr">
+    <h3><span class="no">4</span> 고객 관계</h3>
+    <p class="easy">어떻게 붙잡아</p>
+    <p class="body">고른 조건을 저장해 다시 열어도 이어서 쓰게 합니다. 다녀온 뒤 "추천대로 다녔는지"를 손님이 직접 알려 주는 길을 새로 만듭니다(AX ①).</p>
+    <div class="todo"><b>확인 필요</b> 위치 기록을 받을지, 손님 응답만 받을지</div>
+    <details class="ev"><summary>근거 보기</summary><ul>
+      <li>조건 저장: <code>sunghan/busan-routes_tools/test-features.js:249</code></li>
+      <li>지금은 다녀온 뒤 알려 줄 길이 없음: <code>sunghan/journey/map.md:84</code></li>
+      <li>후기 자동 분류 아이디어와 개인정보 규칙: <code>sunghan/12일차_어데GO_AX매트릭스.md:15</code></li>
+    </ul></details>
+  </section>
+
+  <section class="cell ch">
+    <h3><span class="no">3</span> 채널</h3>
+    <p class="easy">어떻게 만나</p>
+    <p class="body">어데GO 웹 화면(한 · 영 · 중 · 일). 영상을 올릴 곳은 아직 정하지 않았습니다.</p>
+    <div class="todo"><b>확인 필요</b> 외국인이 화면을 어디서 처음 보는지(공항 · 부산역 · 비짓부산 등)</div>
+    <details class="ev"><summary>근거 보기</summary><ul>
+      <li>어데GO 화면 · 4개 언어: <code>sunghan/busan-routes_tools/test-features.js:19</code>, <code>:28</code></li>
+      <li>채널 미정: <code>sunghan/valuechain/steps.md:10</code>, <code>:19</code></li>
+    </ul></details>
+  </section>
+
+  <section class="cell cs">
+    <h3><span class="no">1</span> 고객 세그먼트</h3>
+    <p class="easy">누구에게</p>
+    <p class="body">부산 밖에서 오는 여행자 — 외국인 관광객과 다른 시·도에서 온 국내 여행자. 부산 시민은 대상이 아닙니다.</p>
+    <div class="todo"><b>확인 필요</b> 외국인 비중 · 숫자 — <code>tour_stats_check.md</code>의 내/외국인 칸에서 외국인 입장객 수 세기</div>
+    <details class="ev"><summary>근거 보기</summary><ul>
+      <li>4개 언어 화면: <code>sunghan/busan-routes_tools/test-features.js:28</code></li>
+      <li>입장객 통계에 내/외국인 칸: <code>jaehee/notes/tour_stats_check.md:14</code></li>
+      <li>부산시민을 뺀 방문객 추정 자료: <code>jaehee/scenario.md:23</code></li>
+      <li>팀 기준 대상은 20~30대 여행자: <code>sunghan/CLAUDE.md:16</code></li>
+    </ul></details>
+  </section>
+
+  <section class="cell co">
+    <h3><span class="no">9</span> 비용 구조</h3>
+    <p class="easy">돈이 드는 곳</p>
+    <p class="body">자료 값은 무료입니다. 손님이 늘면 OSRM 공용 서버를 쓸 수 없어(대량 사용 금지) 길찾기 서버를 따로 둘 값이 듭니다. OSM 출처 표시 · ODbL 공개 같은 규칙을 지키는 품도 듭니다.</p>
+    <div class="todo"><b>확인 필요</b> 서버 값 금액</div>
+    <details class="ev"><summary>근거 보기</summary><ul>
+      <li>자료 무료: <code>sunghan/valuechain/points.md:14</code></li>
+      <li>OSRM 대량 사용 막음, 초당 1건: <code>sunghan/research/2026-11-19-data-license.md:32</code>, <code>:100</code></li>
+      <li>ODbL 공개 방법: <code>sunghan/research/2026-11-19-data-license.md:89</code></li>
+    </ul></details>
+  </section>
+
+  <section class="cell rv">
+    <h3><span class="no">5</span> 수익원</h3>
+    <p class="easy">어떻게 돈을 받아</p>
+    <p class="body"><span class="model">수수료</span> 부산 안의 시장 가게 · 관광지가, 어데GO 추천 경로로 손님이 실제로 찾아왔다는 확인(AX ①)을 보고, 데려온 손님 한 팀마다 <span class="tag">확인 필요</span> 원쯤의 수수료를 우리에게 냅니다.</p>
+    <div class="todo"><b>확인 필요</b> 금액 · 내겠다는 가게 — 팀 파일에 금액 없음, 가게 한 곳 이상에 물어보기</div>
+    <details class="ev"><summary>근거 보기</summary><ul>
+      <li>'손님을 데려다주는 값' 후보: <code>sunghan/valuechain/flows.md:67</code></li>
+      <li>지금 우리에게 들어오는 돈은 실선이 0개: <code>sunghan/valuechain/flows.md:81</code></li>
+      <li>7단계 돈 미정: <code>sunghan/valuechain/steps.md:13</code>, <code>:20</code></li>
+    </ul></details>
+  </section>
+
+</div>
+
+<h2>세어 보기</h2>
+<div class="count">
+  <div>근거가 있는 줄<strong>9 / 9</strong></div>
+  <div><span class="tag">확인 필요</span>가 붙은 줄<strong>9 / 9</strong></div>
+  <div>근거만으로 다 채운 줄<strong>0 / 9</strong></div>
+</div>
+<p>가장 비어 있는 곳: <b>수익원 금액</b>(팀 파일에 원 단위 숫자 없음)과 <b>AX ① 추천대로 다녔는지 확인하는 방법</b>(지금 다녀온 뒤 알려 줄 길이 없음, <code>sunghan/journey/map.md:84</code>).</p>
+
+<h2>사람이 할 일</h2>
+<ol>
+  <li>수익원 줄을 소리 내어 읽고 "부산 시장 가게가 정말 이 수수료를 낼까?"에 내 답을 한 줄 붙이기.<br>
+    내 답: ______________________________________________</li>
+  <li>고객을 외국인 · 타지인으로 둘지, 팀 파일처럼 국내 여행자(최민재)로 둘지 팀과 맞추기 (<code>persona.md:84</code>).</li>
+  <li>AX ①에서 손님 위치를 받을 경우, 위치는 개인정보라 받기 전에 동의 · 지우는 때를 먼저 정하기 (<code>12일차_어데GO_AX매트릭스.md:15</code>의 규칙을 본보기로).</li>
+</ol>
+
+<p class="sub" style="margin-top:32px">짝이 되는 가치 제안 캔버스: <code>bm/value-proposition.md</code></p>
+</body>
+</html>
